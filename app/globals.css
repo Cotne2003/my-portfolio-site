@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Bebas Neue;
+  src: url(../font/BebasNeue-Regular.ttf);
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,12 +22,10 @@
 }
 
 * {
-  font-family: sans-serif;
+  font-family: Bebas Neue;
 }
 
 body {
-  background-color: rgb(6, 8, 44);
   color: white;
   background: rgb(1, 12, 21);
-  padding: 10px 30px 0px 30px;
 }

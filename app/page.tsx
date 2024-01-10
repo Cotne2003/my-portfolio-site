@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="bg-[#011221] h-[85vh] rounded-b-lg pt-[10%] pl-[10%]">
+    <main className="">
       <section className="flex flex-col gap-28">
         <div>
           <p className="text-lg font-light leading-6">Hello all. I am</p>
