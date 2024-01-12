@@ -13,11 +13,12 @@ const HomePage = () => {
             <span className="text-white">i am </span>Cotne Basiashvili
           </h1>
           <h2 className="text-xl font-normal w-[696px]">
-            Front-end web developer. As a developer my motivation and confidence
-            are fueled by my ability to write simple yet highly effective code.
-            I am driven by a passion for creating visually stunning and seamless
-            user experiences, and my commitment to simplicity ensures that my
-            code is not only efficient but also easy to understand.
+            <span className="text-[#e99287]">Front-end web developer. </span>As
+            a developer my motivation and confidence are fueled by my ability to
+            write simple yet highly effective code. I am driven by a passion for
+            creating visually stunning and seamless user experiences, and my
+            commitment to simplicity ensures that my code is not only efficient
+            but also easy to understand.
           </h2>
         </div>
         <div>
