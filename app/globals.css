@@ -33,6 +33,10 @@
 body {
   color: white;
   background: rgb(1, 12, 21);
+  background-image: url(../public/assets/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  backdrop-filter: blur(100px);
 }
 
 .Caveat {
