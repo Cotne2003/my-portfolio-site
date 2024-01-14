@@ -11,6 +11,7 @@ type Props = {
 };
 
 const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
+  console.log("test");
   return (
     <section className="">
       <div className="">
