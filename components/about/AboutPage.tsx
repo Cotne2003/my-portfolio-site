@@ -20,7 +20,7 @@ const AboutPage = () => {
     setProf(true);
   };
 
-  // TABS ////////////////////////
+  // TAB ////////////////////////
   const [profTab, setProfTab] = useState(false);
   const profTabHandler: MouseEventHandler<HTMLDivElement> = (e) => {
     e.stopPropagation();
