@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import arrow from "/public/logos/arrow.png";
+import OneProject from "../OneProject/OneProject";
 
 const ProjectsPage = () => {
   const [tech, setTech] = useState(true);
@@ -55,6 +56,9 @@ const ProjectsPage = () => {
             </div>
           </div>
         )}
+      </section>
+      <section className="mt-[88px]">
+        <OneProject />
       </section>
     </main>
   );
