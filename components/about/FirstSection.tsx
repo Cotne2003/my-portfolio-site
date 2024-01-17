@@ -19,7 +19,6 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
   const contactsHandler = () => {
     setContacts(!contacts);
   };
-  console.log("test");
   return (
     <section className="w-[220px]">
       <h2 className="text-5xl">about-me</h2>
