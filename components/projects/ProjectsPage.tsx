@@ -65,7 +65,7 @@ const ProjectsPage = () => {
           </div>
         )}
       </section>
-      <section className="mt-[88px]">
+      <section className="mt-[88px] flex justify-between gap-x-12 gap-y-16 flex-wrap">
         {data.map((project) => (
           <OneProject
             key={project.id}
