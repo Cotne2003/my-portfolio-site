@@ -1,14 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import arrow from "/public/logos/arrow.png";
 import OneProject from "../OneProject/OneProject";
+import { Data, dataProps } from "@/_data";
 
 const ProjectsPage = () => {
+  useEffect(() => {
+    setData(Data);
+  }, []);
+
+  const [data, setData] = useState<dataProps[]>([]);
+
   const [tech, setTech] = useState(true);
   const techHandler = () => {
     setTech(!tech);
   };
+
   return (
     <main className="h-[100vh] flex pl-[8%] pt-[150px] gap-[5%]">
       <section className="w-[220px]">
@@ -58,7 +66,16 @@ const ProjectsPage = () => {
         )}
       </section>
       <section className="mt-[88px]">
-        <OneProject />
+        {data.map((project) => (
+          <OneProject
+            key={project.id}
+            title={project.title}
+            imgSrc={project.img}
+            liveLink={project.liveLink}
+            codeLink={project.codeLink}
+            tools={project.tools}
+          />
+        ))}
       </section>
     </main>
   );
