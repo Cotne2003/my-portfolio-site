@@ -39,6 +39,10 @@ body {
   backdrop-filter: blur(100px);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .Caveat {
   font-family: Caveat;
 }
