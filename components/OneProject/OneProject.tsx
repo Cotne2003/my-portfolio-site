@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import gitLogo from "/public/logos/projectGithub.svg";
 import reactLogo from "/public/logos/reactLogo.webp";
 import typescriptLogo from "/public/logos/typescript.webp";
+import jsLogo from "/public/logos/js.webp";
 import styledCompLogo from "/public/logos/styled-components.webp";
 import nextLogo from "@/public/logos/next.svg";
+import tailwindLogo from "/public/logos/tailwind.webp";
+import restApiLogo from "/public/logos/icons8-rest-api-96.webp";
 
 type Props = {
   codeLink: string;
@@ -16,8 +19,42 @@ type Props = {
 };
 
 const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
-  console.log(imgSrc);
   const [hover, setHover] = useState(false);
+
+  useEffect(() => {
+    tools.map((tool) => {
+      if (tool === "react") {
+        setRea(true);
+      }
+      if (tool === "next") {
+        setNext(true);
+      }
+      if (tool === "typescript") {
+        setTpscript(true);
+      }
+      if (tool === "javascript") {
+        setJs(true);
+      }
+      if (tool === "styled-components") {
+        setStlComp(true);
+      }
+      if (tool === "tailwind") {
+        setTail(true);
+      }
+      if (tool === "API") {
+        setRestAp(true);
+      }
+    });
+  }, [tools]);
+
+  const [next, setNext] = useState(false);
+  const [rea, setRea] = useState(false);
+  const [tpscript, setTpscript] = useState(false);
+  const [js, setJs] = useState(false);
+  const [stlComp, setStlComp] = useState(false);
+  const [tail, setTail] = useState(false);
+  const [restAp, setRestAp] = useState(false);
+
   return (
     <div
       className="w-[370px] h-[370px] border-[2px] border-[#1c2b3a] border-solid rounded-[15px] bg-[#011221] relative"
@@ -39,16 +76,42 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
         </div>
       </div>
       {hover && (
-        <div className="flex absolute w-full h-[200px] rounded-t-[15px] left-0 top-0 bg-[#000000af] justify-between items-center px-9">
-          <span>
-            <img src={nextLogo.src} width={35} alt="" />
-          </span>
-          <span>
-            <img src={typescriptLogo.src} width={35} alt="" />
-          </span>
-          <span>
-            <img src={styledCompLogo.src} width={35} alt="" />
-          </span>
+        <div className="flex absolute w-full h-[200px] rounded-t-[15px] left-0 top-0 bg-[#000000af] justify-evenly items-center">
+          {next && (
+            <span>
+              <img src={nextLogo.src} width={35} alt="" />
+            </span>
+          )}
+          {rea && (
+            <span>
+              <img src={reactLogo.src} width={35} alt="" />
+            </span>
+          )}
+          {tpscript && (
+            <span>
+              <img src={typescriptLogo.src} width={35} alt="" />
+            </span>
+          )}
+          {js && (
+            <span>
+              <img src={jsLogo.src} width={35} alt="" />
+            </span>
+          )}
+          {stlComp && (
+            <span>
+              <img src={styledCompLogo.src} width={35} alt="" />
+            </span>
+          )}
+          {tail && (
+            <span>
+              <img src={tailwindLogo.src} width={35} alt="" />
+            </span>
+          )}
+          {restAp && (
+            <span>
+              <img src={restApiLogo.src} width={35} alt="" />
+            </span>
+          )}
         </div>
       )}
     </div>
