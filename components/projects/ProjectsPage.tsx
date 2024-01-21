@@ -11,10 +11,22 @@ const ProjectsPage = () => {
   }, []);
 
   const [data, setData] = useState<dataProps[]>([]);
+  const [all, setAll] = useState(true);
 
   const [tech, setTech] = useState(true);
   const techHandler = () => {
     setTech(!tech);
+  };
+
+  const filteredData = (tool: string) => {
+    setAll(false);
+    const newData = Data;
+    setData(() => newData.filter((project) => project.tools.includes(tool)));
+  };
+
+  const allData = () => {
+    setAll(true);
+    setData(Data);
   };
 
   return (
@@ -35,31 +47,76 @@ const ProjectsPage = () => {
         {tech && (
           <div>
             <div className="pl-5 mt-3 flex items-center gap-3">
-              <input type="checkbox" className="custom-checkbox" />
+              <input
+                type="radio"
+                className="custom-checkbox"
+                checked={all ? true : false}
+                onClick={allData}
+                name="tt"
+              />
+              <label className="font-sans">All</label>
+            </div>
+            <div className="pl-5 mt-3 flex items-center gap-3">
+              <input
+                type="radio"
+                className="custom-checkbox"
+                name="tt"
+                onClick={() => filteredData("react")}
+              />
               <label className="font-sans">React</label>
             </div>
             <div className="pl-5 mt-3 flex items-center gap-3">
-              <input type="checkbox" className="custom-checkbox" />
+              <input
+                type="radio"
+                className="custom-checkbox"
+                name="tt"
+                onClick={() => filteredData("javascript")}
+              />
               <label className="font-sans">Javascript</label>
             </div>
             <div className="pl-5 mt-3 flex items-center gap-3">
-              <input type="checkbox" className="custom-checkbox" />
+              <input
+                type="radio"
+                className="custom-checkbox"
+                name="tt"
+                onClick={() => filteredData("typescript")}
+              />
               <label className="font-sans">Typescript</label>
             </div>
             <div className="pl-5 mt-3 flex items-center gap-3">
-              <input type="checkbox" className="custom-checkbox" />
+              <input
+                type="radio"
+                className="custom-checkbox"
+                name="tt"
+                onClick={() => filteredData("next")}
+              />
               <label className="font-sans">Next</label>
             </div>
             <div className="pl-5 mt-3 flex items-center gap-3">
-              <input type="checkbox" className="custom-checkbox" />
+              <input
+                type="radio"
+                className="custom-checkbox"
+                name="tt"
+                onClick={() => filteredData("tailwind")}
+              />
               <label className="font-sans">Tailwind CSS</label>
             </div>
             <div className="pl-5 mt-3 flex items-center gap-3">
-              <input type="checkbox" className="custom-checkbox" />
+              <input
+                type="radio"
+                className="custom-checkbox"
+                name="tt"
+                onClick={() => filteredData("styled-components")}
+              />
               <label className="font-sans">Styled Components</label>
             </div>
             <div className="pl-5 mt-3 flex items-center gap-3">
-              <input type="checkbox" className="custom-checkbox" />
+              <input
+                type="radio"
+                className="custom-checkbox"
+                name="tt"
+                onClick={() => filteredData("API")}
+              />
               <label className="font-sans">Rest API</label>
             </div>
           </div>
