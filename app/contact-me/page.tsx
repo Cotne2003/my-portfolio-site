@@ -1,5 +1,6 @@
+import ContactPage from "@/components/contactPage/ContactPage";
 import React from "react";
 
 export default () => {
-  return <div>contact me</div>;
+  return <ContactPage />;
 };

@@ -51,7 +51,7 @@ const ProjectsPage = () => {
                 type="radio"
                 className="custom-checkbox"
                 checked={all ? true : false}
-                onClick={allData}
+                onChange={allData}
                 name="tt"
               />
               <label className="font-sans">All</label>
@@ -61,7 +61,7 @@ const ProjectsPage = () => {
                 type="radio"
                 className="custom-checkbox"
                 name="tt"
-                onClick={() => filteredData("react")}
+                onChange={() => filteredData("react")}
               />
               <label className="font-sans">React</label>
             </div>
@@ -70,7 +70,7 @@ const ProjectsPage = () => {
                 type="radio"
                 className="custom-checkbox"
                 name="tt"
-                onClick={() => filteredData("javascript")}
+                onChange={() => filteredData("javascript")}
               />
               <label className="font-sans">Javascript</label>
             </div>
@@ -79,7 +79,7 @@ const ProjectsPage = () => {
                 type="radio"
                 className="custom-checkbox"
                 name="tt"
-                onClick={() => filteredData("typescript")}
+                onChange={() => filteredData("typescript")}
               />
               <label className="font-sans">Typescript</label>
             </div>
@@ -88,7 +88,7 @@ const ProjectsPage = () => {
                 type="radio"
                 className="custom-checkbox"
                 name="tt"
-                onClick={() => filteredData("next")}
+                onChange={() => filteredData("next")}
               />
               <label className="font-sans">Next</label>
             </div>
@@ -97,7 +97,7 @@ const ProjectsPage = () => {
                 type="radio"
                 className="custom-checkbox"
                 name="tt"
-                onClick={() => filteredData("tailwind")}
+                onChange={() => filteredData("tailwind")}
               />
               <label className="font-sans">Tailwind CSS</label>
             </div>
@@ -106,7 +106,7 @@ const ProjectsPage = () => {
                 type="radio"
                 className="custom-checkbox"
                 name="tt"
-                onClick={() => filteredData("styled-components")}
+                onChange={() => filteredData("styled-components")}
               />
               <label className="font-sans">Styled Components</label>
             </div>
@@ -115,7 +115,7 @@ const ProjectsPage = () => {
                 type="radio"
                 className="custom-checkbox"
                 name="tt"
-                onClick={() => filteredData("API")}
+                onChange={() => filteredData("API")}
               />
               <label className="font-sans">Rest API</label>
             </div>
