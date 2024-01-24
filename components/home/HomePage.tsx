@@ -2,10 +2,35 @@ import React from "react";
 import inst from "/public/logos/Inst.svg";
 import linkedin from "/public/logos/Linkedin.svg";
 import github from "/public/logos/Github.svg";
+import html from "/public/logos/html.webp";
+import css from "/public/logos/css-3.webp";
+import tailwind from "/public/logos/tailwind.webp";
+import react from "/public/logos/reactLogo.webp";
+import styledComp from "/public/logos/styled-components.webp";
+import js from "/public/logos/js.webp";
+import typescript from "/public/logos/typescript.webp";
+import next from "/public/logos/next.svg";
+import git from "/public/logos/git.webp";
+import api from "/public/logos/icons8-rest-api-96.webp";
 
 const HomePage = () => {
   return (
-    <main className="">
+    <main className="flex justify-between">
+      <section className="p-[8%] pt-[10%] text-center w-1/2">
+        <h2 className="text-5xl text-[#B336FF]">SKILLS</h2>
+        <div className="flex flex-wrap justify-evenly gap-20 mt-20">
+          <img src={html.src} alt="" width={60} />
+          <img src={css.src} alt="" width={60} />
+          <img src={tailwind.src} alt="" width={60} />
+          <img src={react.src} alt="" width={60} />
+          <img src={styledComp.src} alt="" width={60} />
+          <img src={js.src} alt="" width={60} />
+          <img src={typescript.src} alt="" width={60} />
+          <img src={next.src} alt="" width={60} />
+          <img src={git.src} alt="" width={60} />
+          <img src={api.src} alt="" width={60} />
+        </div>
+      </section>
       <section className="flex flex-col justify-between text-right items-end p-[8%] pt-[13%] h-[100vh]">
         <div className="flex flex-col gap-1">
           <p className="font-light leading-6 Caveat text-7xl mb-8">"HELLO"</p>
