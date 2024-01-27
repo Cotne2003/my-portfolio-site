@@ -14,8 +14,6 @@ import git from "/public/logos/git.webp";
 import api from "/public/logos/icons8-rest-api-96.webp";
 
 const HomePage = () => {
-  console.log("hahaha");
-
   return (
     <main className="flex justify-between">
       <section className="p-[8%] pt-[10%] text-center w-1/2">
