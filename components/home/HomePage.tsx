@@ -14,27 +14,28 @@ import git from "/public/logos/git.webp";
 import api from "/public/logos/icons8-rest-api-96.webp";
 
 const HomePage = () => {
+  const forImg = "w-[10.5%]";
   return (
     <main className="flex justify-between">
-      <section className="p-[8%] pt-[10%] text-center w-1/2">
+      <section className="pl-[8%] pt-[10%] text-center w-1/2">
         <h2 className="text-5xl text-[#B336FF]">SKILLS</h2>
-        <div className="flex flex-wrap justify-evenly gap-20 mt-20">
-          <img src={html.src} alt="" width={60} />
-          <img src={css.src} alt="" width={60} />
-          <img src={tailwind.src} alt="" width={60} />
-          <img src={react.src} alt="" width={60} />
-          <img src={styledComp.src} alt="" width={60} />
-          <img src={js.src} alt="" width={60} />
-          <img src={typescript.src} alt="" width={60} />
-          <img src={next.src} alt="" width={60} />
-          <img src={git.src} alt="" width={60} />
-          <img src={api.src} alt="" width={60} />
+        <div className="flex flex-wrap justify-evenly gap-x-[15%] gap-y-[40px] mt-20">
+          <img src={html.src} alt="" className={`${forImg}`} />
+          <img src={css.src} alt="" className={`${forImg}`} />
+          <img src={tailwind.src} alt="" className={`${forImg}`} />
+          <img src={react.src} alt="" className={`${forImg}`} />
+          <img src={styledComp.src} alt="" className={`${forImg}`} />
+          <img src={js.src} alt="" className={`${forImg}`} />
+          <img src={typescript.src} alt="" className={`${forImg}`} />
+          <img src={next.src} alt="" className={`${forImg}`} />
+          <img src={git.src} alt="" className={`${forImg}`} />
+          <img src={api.src} alt="" className={`${forImg}`} />
         </div>
       </section>
-      <section className="flex flex-col justify-between text-right items-end p-[8%] pt-[13%] h-[100vh]">
+      <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh]">
         <div className="flex flex-col gap-1">
           <p className="font-light leading-6 Caveat text-7xl mb-8">"HELLO"</p>
-          <h1 className="font-light text-8xl text-[#B336FF]">
+          <h1 className="font-light text-[4vw] text-[#B336FF]">
             <span className="text-white">i am </span>Cotne Basiashvili
           </h1>
           <h2 className="text-xl font-normal w-[696px]">
