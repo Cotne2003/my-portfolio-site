@@ -15,6 +15,7 @@ import api from "/public/logos/icons8-rest-api-96.webp";
 
 const HomePage = () => {
   const forImg = "w-[10.5%]";
+  const forWirdth = "asd";
   return (
     <main className="flex justify-between">
       <section className="pl-[8%] pt-[10%] text-center w-1/2">
