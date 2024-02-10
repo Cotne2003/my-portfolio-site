@@ -11,6 +11,8 @@ const ContactPage = () => {
     setAlso(!also);
   };
 
+  console.log("styles");
+
   return (
     <main className="h-[100vh] flex pl-[8%] pt-[150px] gap-[5%]">
       <section className="w-[250px]">
