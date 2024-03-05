@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { MouseEventHandler } from "react";
 
 type Props = {
@@ -38,7 +39,13 @@ const SecondSection = ({
           </h2>
         </div>
         {profTab && (
-          <div className="cursor-pointer">
+          <motion.div
+            className="cursor-pointer"
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ duration: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+          >
             <h2
               className={`text-2xl rounded-lg py-2 pl-4 gap-8 flex justify-between pr-4 ${
                 prof ? "bg-[#5e5e5e7a]" : "hover:bg-[#5e5e5e7a]"
@@ -55,7 +62,7 @@ const SecondSection = ({
                 X
               </span>
             </h2>
-          </div>
+          </motion.div>
         )}
       </div>
       <p className="mt-[37px] text-[#8bb4dd] text-xl font-sans">

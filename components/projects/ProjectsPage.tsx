@@ -30,7 +30,7 @@ const ProjectsPage = () => {
   };
 
   return (
-    <main className="flex pl-[8%] pt-[150px] gap-[50px] bg-[#010c15] pb-[5%]">
+    <main className="flex pl-[8%] pt-[150px] gap-[50px] bg-[#010c15] pb-[5%] h-[100vh]">
       <section className="min-w-[250px]">
         <h2 className="text-5xl">projects</h2>
         <div className="mt-[40px]">
@@ -122,7 +122,7 @@ const ProjectsPage = () => {
           </div>
         )}
       </section>
-      <section className="mt-[88px] flex justify-evenly gap-x-16 gap-y-[64px] flex-wrap pr-[5%] for-scroll">
+      <section className="mt-[0px] flex justify-evenly gap-x-16 gap-y-[64px] flex-wrap pr-[5%] for-scroll">
         {data.map((project) => (
           <OneProject
             key={project.id}
