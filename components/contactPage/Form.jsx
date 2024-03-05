@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const From = () => {
   const form = useRef();
@@ -26,7 +27,12 @@ const From = () => {
       );
   };
   return (
-    <section className="w-[770px] mt-[65px]">
+    <motion.section
+      className="w-[770px] mt-[65px]"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <div>
         <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
           <div className="flex flex-col">
@@ -60,7 +66,7 @@ const From = () => {
           </button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

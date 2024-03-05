@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { MouseEventHandler } from "react";
 
 type Props = {
@@ -38,36 +38,53 @@ const SecondSection = ({
             </div>
           </h2>
         </div>
-        {profTab && (
-          <motion.div
-            className="cursor-pointer"
-            initial={{ x: -100, opacity: 0 }}
-            transition={{ duration: 1 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <h2
-              className={`text-2xl rounded-lg py-2 pl-4 gap-8 flex justify-between pr-4 ${
-                prof ? "bg-[#5e5e5e7a]" : "hover:bg-[#5e5e5e7a]"
-              }`}
-              onClick={profHandler}
+        <AnimatePresence>
+          {profTab && (
+            <motion.div
+              className="cursor-pointer"
+              initial={{ x: -100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              exit={{ x: -100, opacity: 0 }}
             >
-              <div>
-                // info <span className="text-[#607b96]">/ PROFFESIONAL</span>
-              </div>
-              <span
-                className="Caveat text-gray-400 hover:text-white cursor-default"
-                onClick={profTabHandler}
+              <h2
+                className={`text-2xl rounded-lg py-2 pl-4 gap-8 flex justify-between pr-4 ${
+                  prof ? "bg-[#5e5e5e7a]" : "hover:bg-[#5e5e5e7a]"
+                }`}
+                onClick={profHandler}
               >
-                X
-              </span>
-            </h2>
-          </motion.div>
-        )}
+                <div>
+                  // info <span className="text-[#607b96]">/ PROFFESIONAL</span>
+                </div>
+                <span
+                  className="Caveat text-gray-400 hover:text-white cursor-default"
+                  onClick={profTabHandler}
+                >
+                  X
+                </span>
+              </h2>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-      <p className="mt-[37px] text-[#8bb4dd] text-xl font-sans">
-        {pers ? persTxt : prof ? profTxt : ""}
-      </p>
+      {pers ? (
+        <motion.p
+          className="mt-[37px] text-[#8bb4dd] text-xl font-sans"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        >
+          {persTxt}
+        </motion.p>
+      ) : prof ? (
+        <motion.p className="mt-[37px] text-[#8bb4dd] text-xl font-sans">
+          {profTxt}
+        </motion.p>
+      ) : (
+        ""
+      )}
     </section>
   );
 };

@@ -19,8 +19,14 @@ const HomePage = () => {
   const forImg = "w-[10.5%]";
   const forWirdth = "asd";
   return (
-    <motion.main className="flex justify-between">
-      <section className="pl-[8%] pt-[10%] text-center w-1/2">
+    <main className="flex justify-between">
+      <motion.section
+        className="pl-[8%] pt-[10%] text-center w-1/2"
+        initial={{ opacity: 0 }}
+        transition={{ duration: 1, delay: 3 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-5xl text-[#B336FF]">SKILLS</h2>
         <div className="flex flex-wrap justify-evenly gap-x-[15%] gap-y-[40px] mt-20">
           <motion.img
@@ -143,7 +149,7 @@ const HomePage = () => {
             className={`${forImg}`}
           />
         </div>
-      </section>
+      </motion.section>
       <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh]">
         <div className="flex flex-col gap-1">
           <motion.p
@@ -155,19 +161,36 @@ const HomePage = () => {
           >
             "HELLO"
           </motion.p>
-          <h1 className="font-light text-[4vw] text-[#B336FF]">
+          <motion.h1
+            className="font-light text-[4vw] text-[#B336FF]"
+            initial={{ x: 300, opacity: 0, scale: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+            whileInView={{ x: 0, opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+          >
             <span className="text-white">i am </span>Cotne Basiashvili
-          </h1>
-          <h2 className="text-xl font-normal w-[696px]">
+          </motion.h1>
+          <motion.h2
+            className="text-xl font-normal w-[696px]"
+            initial={{ x: 300, opacity: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+          >
             <span className="text-[#e99287]">Front-end web developer. </span>As
             a developer my motivation and confidence are fueled by my ability to
             write simple yet highly effective code. I am driven by a passion for
             creating visually stunning and seamless user experiences, and my
             commitment to simplicity ensures that my code is not only efficient
             but also easy to understand.
-          </h2>
+          </motion.h2>
         </div>
-        <div>
+        <motion.div
+          initial={{ x: 300, opacity: 0 }}
+          transition={{ duration: 1, delay: 2 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <p className="font-normal text-[#607b96]">
             find my profile on Github:
           </p>
@@ -198,9 +221,9 @@ const HomePage = () => {
               <img src={github.src} alt="" className="cursor-pointer" />
             </a>
           </div>
-        </div>
+        </motion.div>
       </section>
-    </motion.main>
+    </main>
   );
 };
 

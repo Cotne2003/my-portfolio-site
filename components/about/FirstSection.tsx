@@ -1,6 +1,7 @@
 import React, { MouseEventHandler, useState } from "react";
 import arrow from "/public/logos/arrow.png";
 import ContactsList from "./ContactsList";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
   persHandler: MouseEventHandler<HTMLDivElement>;
@@ -27,32 +28,39 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
           </span>{" "}
           Info
         </div>
-        {info && (
-          <div className="mt-3">
-            <div
-              className={`pl-5 flex items-center gap-3 Caveat uppercase py-1 ${
-                pers ? "bg-[#5e5e5e7a]" : "hover:bg-[#5e5e5e7a]"
-              } rounded-lg cursor-pointer`}
-              onClick={persHandler}
+        <AnimatePresence>
+          {info && (
+            <motion.div
+              className="mt-3"
+              initial={{ scaleY: 0, originY: 0, originX: 0 }}
+              animate={{ scaleY: 1 }}
+              exit={{ scaleY: 0, originY: 0, originX: 0 }}
             >
-              <span className={`${pers ? "rotate-90" : "rotate-0"}`}>
-                <img src={arrow.src} width={10} alt="" />
-              </span>{" "}
-              personal
-            </div>
-            <div
-              className={`pl-5 flex items-center gap-3 Caveat uppercase py-1 cursor-pointer rounded-lg mt-1 ${
-                prof ? "bg-[#5e5e5e7a]" : "hover:bg-[#5e5e5e7a]"
-              }`}
-              onClick={profHandler}
-            >
-              <span className={`${prof ? "rotate-90" : "rotate-0"}`}>
-                <img src={arrow.src} width={10} alt="" />
-              </span>{" "}
-              proffesional
-            </div>
-          </div>
-        )}
+              <div
+                className={`pl-5 flex items-center gap-3 Caveat uppercase py-1 ${
+                  pers ? "bg-[#5e5e5e7a]" : "hover:bg-[#5e5e5e7a]"
+                } rounded-lg cursor-pointer`}
+                onClick={persHandler}
+              >
+                <span className={`${pers ? "rotate-90" : "rotate-0"}`}>
+                  <img src={arrow.src} width={10} alt="" />
+                </span>{" "}
+                personal
+              </div>
+              <div
+                className={`pl-5 flex items-center gap-3 Caveat uppercase py-1 cursor-pointer rounded-lg mt-1 ${
+                  prof ? "bg-[#5e5e5e7a]" : "hover:bg-[#5e5e5e7a]"
+                }`}
+                onClick={profHandler}
+              >
+                <span className={`${prof ? "rotate-90" : "rotate-0"}`}>
+                  <img src={arrow.src} width={10} alt="" />
+                </span>{" "}
+                proffesional
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <ContactsList />
     </section>

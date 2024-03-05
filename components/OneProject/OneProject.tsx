@@ -9,6 +9,7 @@ import styledCompLogo from "/public/logos/styled-components.webp";
 import nextLogo from "@/public/logos/next.svg";
 import tailwindLogo from "/public/logos/tailwind.webp";
 import restApiLogo from "/public/logos/icons8-rest-api-96.webp";
+import { motion } from "framer-motion";
 
 type Props = {
   codeLink: string;
@@ -56,10 +57,12 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
   const [restAp, setRestAp] = useState(false);
 
   return (
-    <div
+    <motion.div
       className="w-[370px] h-[370px] border-[2px] border-[#1c2b3a] border-solid rounded-[15px] bg-[#011221] relative"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      transition={{ duration: 1 }}
+      whileHover={{ scale: 1.1 }}
     >
       <img src={imgSrc} alt="" className="w-full h-[200px] rounded-t-[15px]" />
       <div className="p-8 text-xl">
@@ -114,7 +117,7 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
           )}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

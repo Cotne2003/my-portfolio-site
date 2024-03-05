@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import email from "/public/logos/Email.svg";
 import telephone from "/public/logos/telephone.png";
 import arrow from "/public/logos/arrow.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ContactsList = () => {
   const [contacts, setContacts] = useState(false);
@@ -21,22 +22,29 @@ const ContactsList = () => {
           contacts
         </div>
       </div>
-      {contacts && (
-        <div className="mt-3">
-          <div className="pl-5 flex gap-3 items-center font-sans py-1 hover:opacity-50 cursor-pointer">
-            <span>
-              <img src={email.src} width={15} alt="" />
-            </span>
-            basiashvilic@gmail.com
-          </div>
-          <div className="pl-5 flex gap-3 items-center font-sans py-1 hover:opacity-50 cursor-pointer">
-            <span>
-              <img src={telephone.src} width={15} alt="" />
-            </span>
-            +(995) 568 864 004
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {contacts && (
+          <motion.div
+            className="mt-3"
+            initial={{ scaleY: 0, originY: 0, originX: 0 }}
+            animate={{ scaleY: 1 }}
+            exit={{ scaleY: 0, originY: 0, originX: 0 }}
+          >
+            <div className="pl-5 flex gap-3 items-center font-sans py-1 hover:opacity-50 cursor-pointer">
+              <span>
+                <img src={email.src} width={15} alt="" />
+              </span>
+              basiashvilic@gmail.com
+            </div>
+            <div className="pl-5 flex gap-3 items-center font-sans py-1 hover:opacity-50 cursor-pointer">
+              <span>
+                <img src={telephone.src} width={15} alt="" />
+              </span>
+              +(995) 568 864 004
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

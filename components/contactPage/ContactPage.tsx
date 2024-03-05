@@ -4,6 +4,7 @@ import ContactsList from "../about/ContactsList";
 import arrow from "/public/logos/arrow.png";
 import link from "/public/logos/link.png";
 import Form from "./Form";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ContactPage = () => {
   const [also, setAlso] = useState(false);
@@ -32,46 +33,53 @@ const ContactPage = () => {
               also find me in
             </div>
           </div>
-          {also && (
-            <div className="mt-3">
-              <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
-                <span>
-                  <img src={link.src} width={15} alt="" />
-                </span>
-                <a
-                  href="https://www.instagram.com/bassiashvili_cotnee/"
-                  target="_blank"
-                  className="font-sans"
-                >
-                  Instagram
-                </a>
-              </div>
-              <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
-                <span>
-                  <img src={link.src} width={15} alt="" />
-                </span>
-                <a
-                  href="https://www.linkedin.com/in/cotne-basiashvili-23a532282/"
-                  target="_blank"
-                  className="font-sans"
-                >
-                  LinkedIn
-                </a>
-              </div>
-              <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
-                <span>
-                  <img src={link.src} width={15} alt="" />
-                </span>
-                <a
-                  href="https://www.facebook.com/TsotneBasiashvili"
-                  target="_blank"
-                  className="font-sans"
-                >
-                  Facebook
-                </a>
-              </div>
-            </div>
-          )}
+          <AnimatePresence>
+            {also && (
+              <motion.div
+                className="mt-3"
+                initial={{ scaleY: 0, originY: 0, originX: 0 }}
+                animate={{ scaleY: 1 }}
+                exit={{ scaleY: 0, originY: 0, originX: 0 }}
+              >
+                <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
+                  <span>
+                    <img src={link.src} width={15} alt="" />
+                  </span>
+                  <a
+                    href="https://www.instagram.com/bassiashvili_cotnee/"
+                    target="_blank"
+                    className="font-sans"
+                  >
+                    Instagram
+                  </a>
+                </div>
+                <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
+                  <span>
+                    <img src={link.src} width={15} alt="" />
+                  </span>
+                  <a
+                    href="https://www.linkedin.com/in/cotne-basiashvili-23a532282/"
+                    target="_blank"
+                    className="font-sans"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+                <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
+                  <span>
+                    <img src={link.src} width={15} alt="" />
+                  </span>
+                  <a
+                    href="https://www.facebook.com/TsotneBasiashvili"
+                    target="_blank"
+                    className="font-sans"
+                  >
+                    Facebook
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
       <Form />
