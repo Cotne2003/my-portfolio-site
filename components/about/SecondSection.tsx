@@ -40,7 +40,7 @@ const SecondSection = ({
             onClick={persHandler}
           >
             <div>
-              // info <span className="text-[#607b96]">/ personal</span>
+              {"//"} info <span className="text-[#607b96]">/ personal</span>
             </div>
           </h2>
         </motion.div>
@@ -61,7 +61,8 @@ const SecondSection = ({
                 onClick={profHandler}
               >
                 <div>
-                  // info <span className="text-[#607b96]">/ PROFFESIONAL</span>
+                  {"//"} info{" "}
+                  <span className="text-[#607b96]">/ PROFFESIONAL</span>
                 </div>
                 <span
                   className="Caveat text-gray-400 hover:text-white cursor-default"

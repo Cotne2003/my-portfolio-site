@@ -5,6 +5,7 @@ import arrow from "/public/logos/arrow.png";
 import link from "/public/logos/link.png";
 import Form from "./Form";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const ContactPage = () => {
   const [also, setAlso] = useState(false);
@@ -28,7 +29,7 @@ const ContactPage = () => {
               onClick={alsoHandler}
             >
               <span className={`${also ? "rotate-90" : "rotate-0"}`}>
-                <img src={arrow.src} width={10} alt="" />
+                <Image src={arrow} width={10} alt="" />
               </span>{" "}
               also find me in
             </div>
@@ -43,7 +44,7 @@ const ContactPage = () => {
               >
                 <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
                   <span>
-                    <img src={link.src} width={15} alt="" />
+                    <Image src={link} width={15} alt="" />
                   </span>
                   <a
                     href="https://www.instagram.com/bassiashvili_cotnee/"
@@ -55,7 +56,7 @@ const ContactPage = () => {
                 </div>
                 <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
                   <span>
-                    <img src={link.src} width={15} alt="" />
+                    <Image src={link} width={15} alt="" />
                   </span>
                   <a
                     href="https://www.linkedin.com/in/cotne-basiashvili-23a532282/"
@@ -67,7 +68,7 @@ const ContactPage = () => {
                 </div>
                 <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
                   <span>
-                    <img src={link.src} width={15} alt="" />
+                    <Image src={link} width={15} alt="" />
                   </span>
                   <a
                     href="https://www.facebook.com/TsotneBasiashvili"
