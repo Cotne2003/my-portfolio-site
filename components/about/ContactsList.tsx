@@ -3,6 +3,7 @@ import email from "/public/logos/Email.svg";
 import telephone from "/public/logos/telephone.png";
 import arrow from "/public/logos/arrow.png";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const ContactsList = () => {
   const [contacts, setContacts] = useState(false);
@@ -17,7 +18,7 @@ const ContactsList = () => {
           onClick={contactsHandler}
         >
           <span className={`${contacts ? "rotate-90" : "rotate-0"}`}>
-            <img src={arrow.src} width={10} alt="" />
+            <Image src={arrow} width={10} alt="" />
           </span>{" "}
           contacts
         </div>
@@ -32,13 +33,13 @@ const ContactsList = () => {
           >
             <div className="pl-5 flex gap-3 items-center font-sans py-1 hover:opacity-50 cursor-pointer">
               <span>
-                <img src={email.src} width={15} alt="" />
+                <Image src={email} width={15} alt="" />
               </span>
               basiashvilic@gmail.com
             </div>
             <div className="pl-5 flex gap-3 items-center font-sans py-1 hover:opacity-50 cursor-pointer">
               <span>
-                <img src={telephone.src} width={15} alt="" />
+                <Image src={telephone} width={15} alt="" />
               </span>
               +(995) 568 864 004
             </div>

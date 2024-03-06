@@ -2,6 +2,7 @@ import { MouseEventHandler, useState } from "react";
 import arrow from "/public/logos/arrow.png";
 import ContactsList from "./ContactsList";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 type Props = {
   persHandler: MouseEventHandler<HTMLDivElement>;
@@ -24,7 +25,7 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
           onClick={infoHandler}
         >
           <span className={`${info ? "rotate-90" : "rotate-0"}`}>
-            <img src={arrow.src} width={10} alt="" />
+            <Image src={arrow} width={10} alt="" />
           </span>{" "}
           Info
         </div>
@@ -43,7 +44,7 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
                 onClick={persHandler}
               >
                 <span className={`${pers ? "rotate-90" : "rotate-0"}`}>
-                  <img src={arrow.src} width={10} alt="" />
+                  <Image src={arrow} width={10} alt="" />
                 </span>{" "}
                 personal
               </div>
@@ -54,7 +55,7 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
                 onClick={profHandler}
               >
                 <span className={`${prof ? "rotate-90" : "rotate-0"}`}>
-                  <img src={arrow.src} width={10} alt="" />
+                  <Image src={arrow} width={10} alt="" />
                 </span>{" "}
                 proffesional
               </div>

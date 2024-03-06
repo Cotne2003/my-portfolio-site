@@ -13,6 +13,7 @@ import typescript from "/public/logos/typescript.webp";
 import next from "/public/logos/next.svg";
 import git from "/public/logos/git.webp";
 import api from "/public/logos/icons8-rest-api-96.webp";
+import Image from "next/image";
 
 const skills = [
   html,
@@ -64,7 +65,7 @@ const HomePage = () => {
             whileInView={{ x: 0, opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
           >
-            "HELLO"
+            &quot;HELLO&quot;
           </motion.p>
           <motion.h1
             className="font-light text-[4vw] text-[#B336FF]"
@@ -115,16 +116,16 @@ const HomePage = () => {
               href="https://www.instagram.com/bassiashvili_cotnee/"
               target="_blank"
             >
-              <img src={inst.src} alt="" className="cursor-pointer" />
+              <Image src={inst} alt="" className="cursor-pointer" />
             </a>
             <a
               href="https://www.linkedin.com/in/cotne-basiashvili-23a532282/"
               target="_blank"
             >
-              <img src={linkedin.src} alt="" className="cursor-pointer" />
+              <Image src={linkedin} alt="" className="cursor-pointer" />
             </a>
             <a href="https://github.com/Cotne2003" target="_blank">
-              <img src={github.src} alt="" className="cursor-pointer" />
+              <Image src={github} alt="" className="cursor-pointer" />
             </a>
           </div>
         </motion.div>

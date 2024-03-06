@@ -1,5 +1,7 @@
 import AboutPage from "@/components/about/AboutPage";
 
-export default () => {
+const About = () => {
   return <AboutPage />;
 };
+
+export default About;

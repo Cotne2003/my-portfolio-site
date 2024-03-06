@@ -5,6 +5,7 @@ import arrow from "/public/logos/arrow.png";
 import OneProject from "../OneProject/OneProject";
 import { Data, dataProps } from "@/_data";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 const ProjectsPage = () => {
   useEffect(() => {
@@ -40,7 +41,7 @@ const ProjectsPage = () => {
             onClick={techHandler}
           >
             <span className={`${tech ? "rotate-90" : "rotate-0"}`}>
-              <img src={arrow.src} width={10} alt="" />
+              <Image src={arrow} width={10} alt="" />
             </span>{" "}
             tech stacks
           </div>
