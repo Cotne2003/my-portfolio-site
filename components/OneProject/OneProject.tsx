@@ -65,8 +65,10 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
       transition={{ duration: 1 }}
       whileHover={{ scale: 1.1 }}
     >
-      <img
-        src={`${imgSrc}`}
+      <Image
+        src={imgSrc}
+        width={400}
+        height={200}
         alt=""
         className="w-full h-[200px] rounded-t-[15px]"
       />
