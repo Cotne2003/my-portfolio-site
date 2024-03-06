@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import gitLogo from "/public/logos/projectGithub.svg";
 import reactLogo from "/public/logos/reactLogo.webp";
 import typescriptLogo from "/public/logos/typescript.webp";
