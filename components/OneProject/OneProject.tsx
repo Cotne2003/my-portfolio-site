@@ -10,6 +10,7 @@ import nextLogo from "@/public/logos/next.svg";
 import tailwindLogo from "/public/logos/tailwind.webp";
 import restApiLogo from "/public/logos/icons8-rest-api-96.webp";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Props = {
   codeLink: string;
@@ -64,7 +65,11 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
       transition={{ duration: 1 }}
       whileHover={{ scale: 1.1 }}
     >
-      <img src={imgSrc} alt="" className="w-full h-[200px] rounded-t-[15px]" />
+      <Image
+        src={imgSrc}
+        alt=""
+        className="w-full h-[200px] rounded-t-[15px]"
+      />
       <div className="p-8 text-xl">
         <h2 className="Caveat uppercase">{title}</h2>
         <div className="flex justify-between items-center">
@@ -74,7 +79,7 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
             </button>
           </a>
           <a href={codeLink} target="_blank">
-            <img src={gitLogo.src} alt="" width={40} className="mt-4" />
+            <Image src={gitLogo.src} alt="" width={40} className="mt-4" />
           </a>
         </div>
       </div>
@@ -82,37 +87,37 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
         <div className="flex absolute w-full h-[200px] rounded-t-[15px] left-0 top-0 bg-[#000000af] justify-evenly items-center">
           {next && (
             <span>
-              <img src={nextLogo.src} width={35} alt="" />
+              <Image src={nextLogo.src} width={35} alt="" />
             </span>
           )}
           {rea && (
             <span>
-              <img src={reactLogo.src} width={35} alt="" />
+              <Image src={reactLogo.src} width={35} alt="" />
             </span>
           )}
           {tpscript && (
             <span>
-              <img src={typescriptLogo.src} width={35} alt="" />
+              <Image src={typescriptLogo.src} width={35} alt="" />
             </span>
           )}
           {js && (
             <span>
-              <img src={jsLogo.src} width={35} alt="" />
+              <Image src={jsLogo.src} width={35} alt="" />
             </span>
           )}
           {stlComp && (
             <span>
-              <img src={styledCompLogo.src} width={35} alt="" />
+              <Image src={styledCompLogo.src} width={35} alt="" />
             </span>
           )}
           {tail && (
             <span>
-              <img src={tailwindLogo.src} width={35} alt="" />
+              <Image src={tailwindLogo.src} width={35} alt="" />
             </span>
           )}
           {restAp && (
             <span>
-              <img src={restApiLogo.src} width={35} alt="" />
+              <Image src={restApiLogo.src} width={35} alt="" />
             </span>
           )}
         </div>

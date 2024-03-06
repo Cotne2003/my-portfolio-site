@@ -1,5 +1,7 @@
 import ContactPage from "@/components/contactPage/ContactPage";
 
-export default () => {
+const ContactMe = () => {
   return <ContactPage />;
 };
+
+export default ContactMe;
