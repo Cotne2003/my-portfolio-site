@@ -26,7 +26,13 @@ const SecondSection = ({
   return (
     <section className="w-[40%] mt-[-5px]">
       <div className="flex gap-10">
-        <div className="cursor-pointer">
+        <motion.div
+          className="cursor-pointer"
+          initial={{ x: -100, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <h2
             className={`text-2xl rounded-lg py-2 pl-4 gap-8 flex justify-between pr-4  ${
               pers ? "bg-[#5e5e5e7a]" : "hover:bg-[#5e5e5e7a]"
@@ -37,7 +43,7 @@ const SecondSection = ({
               // info <span className="text-[#607b96]">/ personal</span>
             </div>
           </h2>
-        </div>
+        </motion.div>
         <AnimatePresence>
           {profTab && (
             <motion.div

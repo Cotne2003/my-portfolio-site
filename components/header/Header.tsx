@@ -11,16 +11,28 @@ const Header = () => {
         welcome !
       </p>
       <nav className="flex mr-[8%]">
-        <Link href={"/"} className="text-3xl px-12 py-6">
+        <Link
+          href={"/"}
+          className="text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35"
+        >
           Hello
         </Link>
-        <Link href={"/about"} className="text-3xl px-12 py-6">
+        <Link
+          href={"/about"}
+          className="text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35"
+        >
           About Me
         </Link>
-        <Link href={"projects"} className="text-3xl px-12 py-6">
+        <Link
+          href={"projects"}
+          className="text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35"
+        >
           Projects
         </Link>
-        <Link href={"/contact-me"} className="text-3xl pl-12 py-6">
+        <Link
+          href={"/contact-me"}
+          className="text-3xl pl-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35"
+        >
           Contact Me
         </Link>
       </nav>

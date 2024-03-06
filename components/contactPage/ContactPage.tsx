@@ -37,9 +37,9 @@ const ContactPage = () => {
             {also && (
               <motion.div
                 className="mt-3"
-                initial={{ scaleY: 0, originY: 0, originX: 0 }}
+                initial={{ scaleY: 0, originY: 0 }}
                 animate={{ scaleY: 1 }}
-                exit={{ scaleY: 0, originY: 0, originX: 0 }}
+                exit={{ scaleY: 0, originY: 0 }}
               >
                 <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer">
                   <span>
