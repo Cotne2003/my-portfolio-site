@@ -65,8 +65,8 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
       transition={{ duration: 1 }}
       whileHover={{ scale: 1.1 }}
     >
-      <Image
-        src={imgSrc}
+      <img
+        src={`${imgSrc}`}
         alt=""
         className="w-full h-[200px] rounded-t-[15px]"
       />
@@ -79,7 +79,7 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
             </button>
           </a>
           <a href={codeLink} target="_blank">
-            <Image src={gitLogo.src} alt="" width={40} className="mt-4" />
+            <Image src={gitLogo} alt="" width={40} className="mt-4" />
           </a>
         </div>
       </div>
@@ -87,37 +87,37 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
         <div className="flex absolute w-full h-[200px] rounded-t-[15px] left-0 top-0 bg-[#000000af] justify-evenly items-center">
           {next && (
             <span>
-              <Image src={nextLogo.src} width={35} alt="" />
+              <Image src={nextLogo} width={35} alt="" />
             </span>
           )}
           {rea && (
             <span>
-              <Image src={reactLogo.src} width={35} alt="" />
+              <Image src={reactLogo} width={35} alt="" />
             </span>
           )}
           {tpscript && (
             <span>
-              <Image src={typescriptLogo.src} width={35} alt="" />
+              <Image src={typescriptLogo} width={35} alt="" />
             </span>
           )}
           {js && (
             <span>
-              <Image src={jsLogo.src} width={35} alt="" />
+              <Image src={jsLogo} width={35} alt="" />
             </span>
           )}
           {stlComp && (
             <span>
-              <Image src={styledCompLogo.src} width={35} alt="" />
+              <Image src={styledCompLogo} width={35} alt="" />
             </span>
           )}
           {tail && (
             <span>
-              <Image src={tailwindLogo.src} width={35} alt="" />
+              <Image src={tailwindLogo} width={35} alt="" />
             </span>
           )}
           {restAp && (
             <span>
-              <Image src={restApiLogo.src} width={35} alt="" />
+              <Image src={restApiLogo} width={35} alt="" />
             </span>
           )}
         </div>
