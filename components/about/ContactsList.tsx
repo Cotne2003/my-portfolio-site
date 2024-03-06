@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import email from "/public/logos/Email.svg";
 import telephone from "/public/logos/telephone.png";
 import arrow from "/public/logos/arrow.png";

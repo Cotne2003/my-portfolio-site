@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import React, { MouseEventHandler } from "react";
+import { MouseEventHandler } from "react";
 
 type Props = {
   pers: boolean;

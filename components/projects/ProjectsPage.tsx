@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import arrow from "/public/logos/arrow.png";
 import OneProject from "../OneProject/OneProject";
 import { Data, dataProps } from "@/_data";

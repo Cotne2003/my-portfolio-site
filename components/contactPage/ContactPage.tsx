@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import ContactsList from "../about/ContactsList";
 import arrow from "/public/logos/arrow.png";
 import link from "/public/logos/link.png";

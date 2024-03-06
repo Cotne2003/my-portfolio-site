@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 import inst from "/public/logos/Inst.svg";
 import linkedin from "/public/logos/Linkedin.svg";

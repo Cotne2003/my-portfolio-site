@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from "react";
+import { MouseEventHandler, useState } from "react";
 import arrow from "/public/logos/arrow.png";
 import ContactsList from "./ContactsList";
 import { motion, AnimatePresence } from "framer-motion";

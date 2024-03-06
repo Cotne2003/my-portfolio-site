@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, MouseEventHandler } from "react";
+import { useState, MouseEventHandler } from "react";
 import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
 
