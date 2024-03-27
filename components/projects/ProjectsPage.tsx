@@ -55,76 +55,118 @@ const ProjectsPage = () => {
               exit={{ scaleY: 0, originY: 0, originX: 0 }}
             >
               <div className="pl-5 mt-3 flex items-center gap-3">
-                <input
-                  type="radio"
-                  className="custom-checkbox"
-                  checked={all ? true : false}
-                  onChange={allData}
-                  name="tt"
-                />
-                <label className="font-sans">All</label>
+                <div className="checkbox-wrapper">
+                  <input
+                    id="_checkbox-1"
+                    type="radio"
+                    checked={all ? true : false}
+                    onChange={allData}
+                    name="tt"
+                  />
+                  <label htmlFor="_checkbox-1">
+                    <div className="tick_mark"></div>
+                  </label>
+                </div>
+                <label className="font-sans" id="tt">
+                  All
+                </label>
               </div>
               <div className="pl-5 mt-3 flex items-center gap-3">
-                <input
-                  type="radio"
-                  className="custom-checkbox"
-                  name="tt"
-                  onChange={() => filteredData("react")}
-                />
+                <div className="checkbox-wrapper">
+                  <input
+                    id="_checkbox-2"
+                    type="radio"
+                    onChange={() => filteredData("react")}
+                    name="tt"
+                  />
+                  <label htmlFor="_checkbox-2" id="tt">
+                    <div className="tick_mark"></div>
+                  </label>
+                </div>
                 <label className="font-sans">React</label>
               </div>
               <div className="pl-5 mt-3 flex items-center gap-3">
-                <input
-                  type="radio"
-                  className="custom-checkbox"
-                  name="tt"
-                  onChange={() => filteredData("javascript")}
-                />
+                <div className="checkbox-wrapper">
+                  <input
+                    id="_checkbox-3"
+                    type="radio"
+                    onChange={() => filteredData("javascript")}
+                    name="tt"
+                  />
+                  <label htmlFor="_checkbox-3" id="tt">
+                    <div className="tick_mark"></div>
+                  </label>
+                </div>
                 <label className="font-sans">Javascript</label>
               </div>
               <div className="pl-5 mt-3 flex items-center gap-3">
-                <input
-                  type="radio"
-                  className="custom-checkbox"
-                  name="tt"
-                  onChange={() => filteredData("typescript")}
-                />
+                <div className="checkbox-wrapper">
+                  <input
+                    id="_checkbox-4"
+                    type="radio"
+                    onChange={() => filteredData("typescript")}
+                    name="tt"
+                  />
+                  <label htmlFor="_checkbox-4" id="tt">
+                    <div className="tick_mark"></div>
+                  </label>
+                </div>
                 <label className="font-sans">Typescript</label>
               </div>
               <div className="pl-5 mt-3 flex items-center gap-3">
-                <input
-                  type="radio"
-                  className="custom-checkbox"
-                  name="tt"
-                  onChange={() => filteredData("next")}
-                />
+                <div className="checkbox-wrapper">
+                  <input
+                    id="_checkbox-5"
+                    type="radio"
+                    onChange={() => filteredData("next")}
+                    name="tt"
+                  />
+                  <label htmlFor="_checkbox-5" id="tt">
+                    <div className="tick_mark"></div>
+                  </label>
+                </div>
                 <label className="font-sans">Next</label>
               </div>
               <div className="pl-5 mt-3 flex items-center gap-3">
-                <input
-                  type="radio"
-                  className="custom-checkbox"
-                  name="tt"
-                  onChange={() => filteredData("tailwind")}
-                />
+                <div className="checkbox-wrapper">
+                  <input
+                    id="_checkbox-6"
+                    type="radio"
+                    onChange={() => filteredData("tailwind")}
+                    name="tt"
+                  />
+                  <label htmlFor="_checkbox-6" id="tt">
+                    <div className="tick_mark"></div>
+                  </label>
+                </div>
                 <label className="font-sans">Tailwind CSS</label>
               </div>
               <div className="pl-5 mt-3 flex items-center gap-3">
-                <input
-                  type="radio"
-                  className="custom-checkbox"
-                  name="tt"
-                  onChange={() => filteredData("styled-components")}
-                />
+                <div className="checkbox-wrapper">
+                  <input
+                    id="_checkbox-7"
+                    type="radio"
+                    onChange={() => filteredData("styled-components")}
+                    name="tt"
+                  />
+                  <label htmlFor="_checkbox-7" id="tt">
+                    <div className="tick_mark"></div>
+                  </label>
+                </div>
                 <label className="font-sans">Styled Components</label>
               </div>
               <div className="pl-5 mt-3 flex items-center gap-3">
-                <input
-                  type="radio"
-                  className="custom-checkbox"
-                  name="tt"
-                  onChange={() => filteredData("API")}
-                />
+                <div className="checkbox-wrapper">
+                  <input
+                    id="_checkbox-8"
+                    type="radio"
+                    onChange={() => filteredData("API")}
+                    name="tt"
+                  />
+                  <label htmlFor="_checkbox-8" id="tt">
+                    <div className="tick_mark"></div>
+                  </label>
+                </div>
                 <label className="font-sans">Rest API</label>
               </div>
             </motion.div>
