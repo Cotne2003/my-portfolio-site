@@ -43,7 +43,9 @@ const HomePage = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl text-[#B336FF]">SKILLS</h2>
+        <h2 className="text-5xl text-[#B336FF] max-[1440px]:text-[40px]">
+          SKILLS
+        </h2>
         <div className="flex flex-wrap justify-evenly gap-x-[15%] gap-y-[40px] mt-20 2xl:gap-y-[70px]">
           {skills.map((skill, index) => (
             <motion.img
@@ -59,7 +61,7 @@ const HomePage = () => {
       <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh]">
         <div className="flex flex-col gap-1">
           <motion.p
-            className="font-light leading-6 Caveat text-7xl mb-8"
+            className="font-light leading-6 Caveat text-7xl mb-8 max-[1440px]:text-[50px]"
             initial={{ x: 300, y: 50, opacity: 0, scale: 0 }}
             transition={{ duration: 1 }}
             whileInView={{ x: 0, opacity: 1, y: 0, scale: 1 }}
