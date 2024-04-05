@@ -9,7 +9,7 @@ const Header = () => {
       <p className="text-[#B336FF] uppercase text-3xl pl-[8%] py-6 max-[1439px]:text-2xl max-[1439px]:pl-[5%]">
         welcome !
       </p>
-      <nav className="flex mr-[8%] max-[1439px]:mr-[5%]">
+      <nav className="flex mr-[8%] max-[1439px]:mr-[5%] max-md:hidden">
         <Link
           href={"/"}
           className="text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8"

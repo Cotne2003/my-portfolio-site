@@ -35,9 +35,9 @@ const HomePage = () => {
   };
 
   return (
-    <main className="flex justify-between">
+    <main className="flex justify-between max-md:flex-col-reverse">
       <motion.section
-        className="pl-[8%] pt-[10%] text-center w-1/2 2xl:w-1/3 2xl:ml-[40px]"
+        className="pl-[8%] pt-[10%] text-center w-1/2 2xl:w-1/3 2xl:ml-[40px] max-[1439px]:w-2/5 max-md:w-full max-md:p-6 max-md:px-5"
         initial={{ opacity: 0 }}
         transition={{ duration: 1, delay: 3 }}
         whileInView={{ opacity: 1 }}
@@ -46,22 +46,22 @@ const HomePage = () => {
         <h2 className="text-5xl text-[#B336FF] max-[1440px]:text-[40px]">
           SKILLS
         </h2>
-        <div className="flex flex-wrap justify-evenly gap-x-[15%] gap-y-[40px] mt-20 2xl:gap-y-[70px]">
+        <div className="flex flex-wrap justify-evenly gap-x-[15%] gap-y-[40px] mt-20 2xl:gap-y-[70px] max-md:mt-10">
           {skills.map((skill, index) => (
             <motion.img
               key={index}
               {...motionCommon}
               src={skill.src}
-              className="w-[10.5%] 2xl:w-[50px]"
+              className="w-[10.5%] 2xl:w-[50px] max-md:w-[40px]"
             />
           ))}
         </div>
       </motion.section>
 
-      <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh]">
-        <div className="flex flex-col gap-1">
+      <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh] max-[1439px]:p-[5%] max-[1439px]:pt-[13%] max-md:text-left max-md:p-0 max-md:pt-[150px] max-md:justify-normal max-md:gap-28 max-md:h-full">
+        <div className="flex flex-col gap-1 max-md:px-[5%]">
           <motion.p
-            className="font-light leading-6 Caveat text-7xl mb-8 max-[1440px]:text-[50px]"
+            className="font-light leading-6 Caveat text-7xl mb-8 max-[1440px]:text-[50px] max-[1439px]:mb-3"
             initial={{ x: 300, y: 50, opacity: 0, scale: 0 }}
             transition={{ duration: 1 }}
             whileInView={{ x: 0, opacity: 1, y: 0, scale: 1 }}
@@ -70,7 +70,7 @@ const HomePage = () => {
             &quot;HELLO&quot;
           </motion.p>
           <motion.h1
-            className="font-light text-[4vw] text-[#B336FF]"
+            className="font-light text-[4vw] text-[#B336FF] max-[1439px]:text-[40px]"
             initial={{ x: 300, opacity: 0, scale: 0 }}
             transition={{ duration: 1, delay: 1 }}
             whileInView={{ x: 0, opacity: 1, y: 0, scale: 1 }}
@@ -79,7 +79,7 @@ const HomePage = () => {
             <span className="text-white">i am </span>Cotne Basiashvili
           </motion.h1>
           <motion.h2
-            className="text-xl font-normal w-[696px]"
+            className="text-xl font-normal w-[696px] max-[1439px]:text-base max-[1439px]:w-[500px] max-md:w-full"
             initial={{ x: 300, opacity: 0 }}
             transition={{ duration: 1, delay: 2 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -99,11 +99,12 @@ const HomePage = () => {
           transition={{ duration: 1, delay: 2 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
+          className="flex flex-col items-end max-md:px-[5%] max-md:items-start max-md:mb-7"
         >
           <p className="font-normal text-[#607b96]">
             find my profile on Github:
           </p>
-          <h3 className="text-2xl text-[#43d9ad]">
+          <h3 className="text-2xl text-[#43d9ad] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35">
             github link <span className="text-white">=</span>{" "}
             <a
               href="https://github.com/Cotne2003"
@@ -118,16 +119,28 @@ const HomePage = () => {
               href="https://www.instagram.com/bassiashvili_cotnee/"
               target="_blank"
             >
-              <Image src={inst} alt="" className="cursor-pointer" />
+              <Image
+                src={inst}
+                alt=""
+                className="cursor-pointer ease-out duration-300 hover:scale-150 active:scale-90"
+              />
             </a>
             <a
-              href="https://www.linkedin.com/in/cotne-basiashvili-23a532282/"
+              href="https://www.linkedin.com/in/tsotne-basiashvili-23a532282/"
               target="_blank"
             >
-              <Image src={linkedin} alt="" className="cursor-pointer" />
+              <Image
+                src={linkedin}
+                alt=""
+                className="cursor-pointer ease-out duration-300 hover:scale-150 active:scale-90"
+              />
             </a>
             <a href="https://github.com/Cotne2003" target="_blank">
-              <Image src={github} alt="" className="cursor-pointer" />
+              <Image
+                src={github}
+                alt=""
+                className="cursor-pointer ease-out duration-300 hover:scale-150 active:scale-90"
+              />
             </a>
           </div>
         </motion.div>
