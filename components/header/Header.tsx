@@ -6,9 +6,17 @@ const Header = () => {
       className="flex justify-between absolute top-0 left-0 w-full"
       style={{ boxShadow: "0px -8px 26.2px 0px #B336FF" }}
     >
-      <p className="text-[#B336FF] uppercase text-3xl pl-[8%] py-6 max-[1439px]:text-2xl max-[1439px]:pl-[5%]">
+      <p className="text-[#B336FF] uppercase text-3xl pl-[8%] py-6 max-[1439px]:text-2xl max-[1439px]:pl-[5%]  max-md:py-4">
         welcome !
       </p>
+      <div className="pr-[5%] py-3 md:hidden">
+        <input type="checkbox" id="checkbox" />
+        <label htmlFor="checkbox" className="toggle">
+          <div className="bars" id="bar1"></div>
+          <div className="bars" id="bar2"></div>
+          <div className="bars" id="bar3"></div>
+        </label>
+      </div>
       <nav className="flex mr-[8%] max-[1439px]:mr-[5%] max-md:hidden">
         <Link
           href={"/"}

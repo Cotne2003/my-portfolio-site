@@ -35,18 +35,18 @@ const HomePage = () => {
   };
 
   return (
-    <main className="flex justify-between max-md:flex-col-reverse">
+    <main className="flex justify-between max-md:h-[100vh]">
       <motion.section
-        className="pl-[8%] pt-[10%] text-center w-1/2 2xl:w-1/3 2xl:ml-[40px] max-[1439px]:w-2/5 max-md:w-full max-md:p-6 max-md:px-5"
+        className="pl-[8%] pt-[10%] text-center w-1/2 2xl:w-1/3 2xl:ml-[40px] max-[1439px]:w-2/5 max-md:hidden max-xl:pt-[140px] max-xl:pl-[5%]"
         initial={{ opacity: 0 }}
         transition={{ duration: 1, delay: 3 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl text-[#B336FF] max-[1440px]:text-[40px]">
+        <h2 className="text-5xl text-[#B336FF] max-[1440px]:text-[40px] max-xl:text-3xl">
           SKILLS
         </h2>
-        <div className="flex flex-wrap justify-evenly gap-x-[15%] gap-y-[40px] mt-20 2xl:gap-y-[70px] max-md:mt-10">
+        <div className="flex flex-wrap justify-evenly gap-x-[15%] gap-y-[40px] mt-20 2xl:gap-y-[70px] max-xl:mt-10">
           {skills.map((skill, index) => (
             <motion.img
               key={index}
@@ -58,8 +58,8 @@ const HomePage = () => {
         </div>
       </motion.section>
 
-      <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh] max-[1439px]:p-[5%] max-[1439px]:pt-[13%] max-md:text-left max-md:p-0 max-md:pt-[150px] max-md:justify-normal max-md:gap-28 max-md:h-full">
-        <div className="flex flex-col gap-1 max-md:px-[5%]">
+      <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh] max-[1439px]:p-[5%] max-[1439px]:pt-[13%] max-md:text-left max-md:p-0 max-md:pt-[120px] max-md:h-full max-xl:pt-[150px]">
+        <div className="flex flex-col gap-1 max-md:px-[5%] max-md:gap-0">
           <motion.p
             className="font-light leading-6 Caveat text-7xl mb-8 max-[1440px]:text-[50px] max-[1439px]:mb-3"
             initial={{ x: 300, y: 50, opacity: 0, scale: 0 }}
@@ -79,7 +79,7 @@ const HomePage = () => {
             <span className="text-white">i am </span>Cotne Basiashvili
           </motion.h1>
           <motion.h2
-            className="text-xl font-normal w-[696px] max-[1439px]:text-base max-[1439px]:w-[500px] max-md:w-full"
+            className="text-xl font-normal w-[696px] max-[1439px]:text-base max-[1439px]:w-[500px] max-md:w-full max-lg:w-[400px]"
             initial={{ x: 300, opacity: 0 }}
             transition={{ duration: 1, delay: 2 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -99,17 +99,17 @@ const HomePage = () => {
           transition={{ duration: 1, delay: 2 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="flex flex-col items-end max-md:px-[5%] max-md:items-start max-md:mb-7"
+          className="flex flex-col items-end max-md:px-[5%] max-md:items-start max-md:absolute bottom-10"
         >
           <p className="font-normal text-[#607b96]">
             find my profile on Github:
           </p>
-          <h3 className="text-2xl text-[#43d9ad] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35">
+          <h3 className="text-2xl text-[#43d9ad] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-md:text-xl">
             github link <span className="text-white">=</span>{" "}
             <a
               href="https://github.com/Cotne2003"
               target="_blank"
-              className="underline text-2xl text-[#e99287]"
+              className="underline text-2xl text-[#e99287] max-md:text-xl"
             >
               https://github.com/Cotne2003
             </a>
