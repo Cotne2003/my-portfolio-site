@@ -21,7 +21,12 @@ const Header = () => {
         welcome !
       </p>
       <div className="pr-[5%] py-3 md:hidden">
-        <input type="checkbox" id="checkbox" onChange={menuHandler} />
+        <input
+          type="checkbox"
+          id="checkbox"
+          onChange={menuHandler}
+          checked={menu}
+        />
         <label htmlFor="checkbox" className="toggle">
           <div className="bars" id="bar1"></div>
           <div className="bars" id="bar2"></div>
