@@ -29,8 +29,6 @@ const skills = [
 ];
 
 const HomePage = () => {
-  console.log("test");
-
   const motionCommon = {
     transition: { repeat: Infinity, duration: 4 },
     animate: { scale: [0.9, 1.2, 0.9] },

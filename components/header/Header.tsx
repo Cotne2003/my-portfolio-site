@@ -1,6 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+import MobileMenu from "./MobileMenu";
+import { AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const [menu, setMenu] = useState(false);
+  const menuHandler = () => {
+    setMenu(!menu);
+  };
+  const pathname = usePathname();
   return (
     <header
       className="flex justify-between absolute top-0 left-0 w-full"
@@ -10,7 +21,7 @@ const Header = () => {
         welcome !
       </p>
       <div className="pr-[5%] py-3 md:hidden">
-        <input type="checkbox" id="checkbox" />
+        <input type="checkbox" id="checkbox" onChange={menuHandler} />
         <label htmlFor="checkbox" className="toggle">
           <div className="bars" id="bar1"></div>
           <div className="bars" id="bar2"></div>
@@ -20,29 +31,40 @@ const Header = () => {
       <nav className="flex mr-[8%] max-[1439px]:mr-[5%] max-md:hidden">
         <Link
           href={"/"}
-          className="text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8"
+          className={`${
+            pathname === "/" ? "text-[#B336FF] scale-110" : ""
+          } text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8`}
         >
           Hello
         </Link>
         <Link
           href={"/about"}
-          className="text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8"
+          className={`${
+            pathname === "/about" ? "text-[#B336FF] scale-110" : ""
+          } text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8`}
         >
           About Me
         </Link>
         <Link
           href={"projects"}
-          className="text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8"
+          className={`${
+            pathname === "/projects" ? "text-[#B336FF] scale-110" : ""
+          } text-3xl px-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8`}
         >
           Projects
         </Link>
         <Link
           href={"/contact-me"}
-          className="text-3xl pl-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8 max-[1439px]:pr-[0px]"
+          className={`${
+            pathname === "/contact-me" ? "text-[#B336FF] scale-110" : ""
+          } text-3xl pl-12 py-6 hover:text-[#B336FF] ease-out duration-300 hover:scale-110 active:scale-90 active:opacity-35 max-[1439px]:text-2xl max-[1439px]:px-8 max-[1439px]:pr-[0px]`}
         >
           Contact Me
         </Link>
       </nav>
+      <AnimatePresence>
+        {menu && <MobileMenu menuHandler={menuHandler} />}
+      </AnimatePresence>
     </header>
   );
 };
