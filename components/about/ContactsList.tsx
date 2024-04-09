@@ -27,9 +27,9 @@ const ContactsList = () => {
         {contacts && (
           <motion.div
             className="mt-3"
-            initial={{ scaleY: 0, originY: 0, originX: 0 }}
-            animate={{ scaleY: 1 }}
-            exit={{ scaleY: 0, originY: 0, originX: 0 }}
+            initial={{ opacity: 0, scaleY: 0, originY: 0 }}
+            animate={{ opacity: 1, scaleY: 1, y: 0 }}
+            exit={{ opacity: 0, scaleY: 0, originY: 0 }}
           >
             <div className="pl-5 flex gap-3 items-center font-sans py-1 hover:opacity-50 cursor-pointer">
               <span>

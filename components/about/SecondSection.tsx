@@ -24,10 +24,10 @@ const SecondSection = ({
     "As a junior front-end web developer, I am committed to an ongoing journey of skill enhancement and embracing emerging technologies. While my foray into the expansive realm of tech occurred just a few months ago, I've swiftly demonstrated remarkable adaptability and a keen ability to learn flexibly. Although my solid foundation in IT from Georgian Technology University provided a robust base, my appetite for more adventurous learning experiences prompted me to seek new horizons. In pursuit of these endeavors, I have recently joined a dynamic team, where I look forward to collaborating on exciting projects that not only challenge me but also contribute to my growth as a developer. This decision reflects my eagerness to immerse myself in a stimulating environment, where the synergy of teamwork and innovative projects fosters continuous learning and professional development.";
 
   return (
-    <section className="w-[40%] mt-[-5px]">
+    <section className="w-[40%] mt-[-5px] max-[1439px]:w-2/3 max-lg:w-full max-lg:mt-0">
       <div className="flex gap-10">
         <motion.div
-          className="cursor-pointer"
+          className="cursor-pointer max-lg:hidden"
           initial={{ x: -100, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -47,7 +47,7 @@ const SecondSection = ({
         <AnimatePresence>
           {profTab && (
             <motion.div
-              className="cursor-pointer"
+              className="cursor-pointer max-lg:hidden"
               initial={{ x: -100, opacity: 0 }}
               transition={{ duration: 1 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -77,7 +77,7 @@ const SecondSection = ({
       </div>
       {pers ? (
         <motion.p
-          className="mt-[37px] text-[#8bb4dd] text-xl font-sans"
+          className="mt-[37px] text-[#8bb4dd] text-xl font-sans max-lg:mt-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -86,7 +86,7 @@ const SecondSection = ({
           {persTxt}
         </motion.p>
       ) : prof ? (
-        <motion.p className="mt-[37px] text-[#8bb4dd] text-xl font-sans">
+        <motion.p className="mt-[37px] text-[#8bb4dd] text-xl font-sans max-lg:mt-0">
           {profTxt}
         </motion.p>
       ) : (

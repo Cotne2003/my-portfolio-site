@@ -49,10 +49,10 @@ const ProjectsPage = () => {
         <AnimatePresence>
           {tech && (
             <motion.div
-              initial={{ scaleY: 0, originY: 0, originX: 0 }}
-              animate={{ scaleY: 1 }}
+              initial={{ opacity: 0, scaleY: 0, originY: 0 }}
+              animate={{ opacity: 1, scaleY: 1, y: 0 }}
+              exit={{ opacity: 0, scaleY: 0, originY: 0 }}
               transition={{ duration: 0.3 }}
-              exit={{ scaleY: 0, originY: 0, originX: 0 }}
             >
               <div className="pl-5 mt-3 flex items-center gap-3">
                 <div className="checkbox-wrapper">

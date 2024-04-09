@@ -14,6 +14,7 @@ import next from "/public/logos/next.svg";
 import git from "/public/logos/git.webp";
 import api from "/public/logos/icons8-rest-api-96.webp";
 import Image from "next/image";
+import { CSSProperties } from "react";
 
 const skills = [
   html,
@@ -34,10 +35,8 @@ const HomePage = () => {
     animate: { scale: [0.9, 1.2, 0.9] },
   };
 
-  console.log("test");
-
   return (
-    <main className="flex justify-between max-md:h-[100vh]">
+    <main className="flex justify-between max-md:h-[100vh] overflow-hidden">
       <motion.section
         className="pl-[8%] pt-[10%] text-center w-1/2 2xl:w-1/3 2xl:ml-[40px] max-[1439px]:w-2/5 max-md:hidden max-xl:pt-[140px] max-xl:pl-[5%]"
         initial={{ opacity: 0 }}
@@ -64,19 +63,29 @@ const HomePage = () => {
         <div className="flex flex-col gap-1 max-md:px-[5%] max-md:gap-0">
           <motion.p
             className="font-light leading-6 Caveat text-7xl mb-8 max-[1440px]:text-[50px] max-[1439px]:mb-3"
-            initial={{ x: 300, y: 50, opacity: 0, scale: 0 }}
+            initial={{ x: "var(--x)", y: 50, opacity: 0, scale: 0 }}
             transition={{ duration: 1 }}
             whileInView={{ x: 0, opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
+            style={
+              {
+                "--x": 300,
+              } as CSSProperties
+            }
           >
             &quot;HELLO&quot;
           </motion.p>
           <motion.h1
             className="font-light text-[4vw] text-[#B336FF] max-[1439px]:text-[40px]"
-            initial={{ x: 300, opacity: 0, scale: 0 }}
+            initial={{ x: "var(--x)", opacity: 0, scale: 0 }}
             transition={{ duration: 1, delay: 1 }}
             whileInView={{ x: 0, opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
+            style={
+              {
+                "--x": 300,
+              } as CSSProperties
+            }
           >
             <span className="text-white">i am </span>Cotne Basiashvili
           </motion.h1>
