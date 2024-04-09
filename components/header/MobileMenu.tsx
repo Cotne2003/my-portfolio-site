@@ -22,7 +22,7 @@ const MobileMenu = ({ menuHandler }: Props) => {
           onClick={menuHandler}
           href={"/"}
           className={`${
-            pathname === "/" ? "text-[#B336FF] scale-110 pl-[10%]" : ""
+            pathname === "/" ? "text-[#B336FF] scale-110 pl-[9%]" : ""
           } text-2xl pl-[5%] py-6 ease-out duration-300 active:scale-90 active:opacity-35 border-b-[1px] border-[#b236ff56]`}
         >
           Hello
@@ -31,7 +31,7 @@ const MobileMenu = ({ menuHandler }: Props) => {
           onClick={menuHandler}
           href={"/about"}
           className={`${
-            pathname === "/about" ? "text-[#B336FF] scale-110 pl-[10%]" : ""
+            pathname === "/about" ? "text-[#B336FF] scale-110 pl-[9%]" : ""
           } text-2xl pl-[5%] py-6 ease-out duration-300 active:scale-90 active:opacity-35 border-b-[1px] border-[#b236ff56]`}
         >
           About Me
@@ -40,7 +40,7 @@ const MobileMenu = ({ menuHandler }: Props) => {
           onClick={menuHandler}
           href={"projects"}
           className={`${
-            pathname === "/projects" ? "text-[#B336FF] scale-110 pl-[10%]" : ""
+            pathname === "/projects" ? "text-[#B336FF] scale-110 pl-[9%]" : ""
           } text-2xl pl-[5%] py-6 ease-out duration-300 active:scale-90 active:opacity-35 border-b-[1px] border-[#b236ff56]`}
         >
           Projects
@@ -49,9 +49,7 @@ const MobileMenu = ({ menuHandler }: Props) => {
           onClick={menuHandler}
           href={"/contact-me"}
           className={`${
-            pathname === "/contact-me"
-              ? "text-[#B336FF] scale-110 pl-[10%]"
-              : ""
+            pathname === "/contact-me" ? "text-[#B336FF] scale-110 pl-[9%]" : ""
           } text-2xl pl-[5%] py-6 ease-out duration-300 active:scale-90 active:opacity-35 border-b-[1px] border-[#b236ff56]`}
         >
           Contact Me
