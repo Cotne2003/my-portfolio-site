@@ -34,6 +34,8 @@ const HomePage = () => {
     animate: { scale: [0.9, 1.2, 0.9] },
   };
 
+  console.log("test");
+
   return (
     <main className="flex justify-between max-md:h-[100vh]">
       <motion.section
