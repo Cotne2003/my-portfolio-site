@@ -77,7 +77,7 @@ const SecondSection = ({
       </div>
       {pers ? (
         <motion.p
-          className="mt-[37px] text-[#8bb4dd] text-xl font-sans max-lg:mt-0"
+          className="mt-[37px] text-[#8bb4dd] text-xl font-sans max-lg:mt-0 max-lg:text-base"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -86,7 +86,7 @@ const SecondSection = ({
           {persTxt}
         </motion.p>
       ) : prof ? (
-        <motion.p className="mt-[37px] text-[#8bb4dd] text-xl font-sans max-lg:mt-0">
+        <motion.p className="mt-[37px] text-[#8bb4dd] text-xl font-sans max-lg:mt-0 max-lg:text-base">
           {profTxt}
         </motion.p>
       ) : (

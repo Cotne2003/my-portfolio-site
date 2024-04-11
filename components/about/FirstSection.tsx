@@ -16,12 +16,41 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
   const infoHandler = () => {
     setInfo(!info);
   };
+  const waitedH2 = () => {
+    if (info === false && pers === true) {
+      return (
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="absolute top-[240px] text-3xl text-[#B336FF] lg:hidden"
+        >
+          personal
+        </motion.h2>
+      );
+    } else if (info === false && prof === true) {
+      return (
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="absolute top-[240px] text-3xl text-[#B336FF] lg:hidden"
+        >
+          proffesional
+        </motion.h2>
+      );
+    } else {
+      return null;
+    }
+  };
   return (
     <section className="w-[220px] max-lg:w-full">
-      <h2 className="text-5xl">about-me</h2>
+      <h2 className="text-5xl max-lg:text-4xl">about-me</h2>
       <div className="mt-[40px] max-lg:mt-[20px] max-lg:h-[120px]">
         <div
-          className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer"
+          className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer max-lg:text-xl"
           onClick={infoHandler}
         >
           <span className={`${info ? "rotate-90" : "rotate-0"}`}>
@@ -63,6 +92,7 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
           )}
         </AnimatePresence>
       </div>
+      {waitedH2()}
       <div className="max-lg:hidden">
         <ContactsList />
       </div>
