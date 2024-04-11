@@ -91,9 +91,9 @@ const HomePage = () => {
           </motion.h1>
           <motion.h2
             className="text-xl font-normal w-[696px] max-[1439px]:text-base max-[1439px]:w-[500px] max-md:w-full max-lg:w-[400px]"
-            initial={{ x: 300, opacity: 0 }}
+            initial={{ opacity: 0 }}
             transition={{ duration: 1, delay: 2 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             <span className="text-[#e99287]">Front-end web developer. </span>
@@ -106,9 +106,9 @@ const HomePage = () => {
         </div>
 
         <motion.div
-          initial={{ x: 300, opacity: 0 }}
+          initial={{ opacity: 0 }}
           transition={{ duration: 1, delay: 2 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="flex flex-col items-end max-md:px-[5%] max-md:items-start max-md:absolute bottom-10"
         >
