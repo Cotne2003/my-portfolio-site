@@ -13,7 +13,7 @@ const MobileMenu = ({ menuHandler }: Props) => {
     <motion.div
       initial={{ opacity: 0, x: -300 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       exit={{ opacity: 0, x: -300 }}
       className="fixed top-[65px] bg-[#010c15] h-[90vh] w-full z-10 md:hidden overflow-hidden"
     >
