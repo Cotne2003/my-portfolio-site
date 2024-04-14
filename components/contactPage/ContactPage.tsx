@@ -13,16 +13,12 @@ const ContactPage = () => {
     setAlso(!also);
   };
 
-  console.log("test");
-
   return (
     <main className="h-[100vh] flex pl-[8%] pt-[150px] gap-[5%]">
-      <section className="w-[250px]">
+      <section className="w-[220px] relative">
         <h2 className="text-5xl">contact-me</h2>
+
         <div className="mt-[40px]">
-          <ContactsList />
-        </div>
-        <div>
           <div className="mt-[20px]">
             <div
               className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer"
@@ -31,7 +27,7 @@ const ContactPage = () => {
               <span className={`${also ? "rotate-90" : "rotate-0"}`}>
                 <Image src={arrow} width={10} alt="" />
               </span>{" "}
-              also find me in
+              find me in
             </div>
           </div>
           <AnimatePresence>
@@ -82,6 +78,12 @@ const ContactPage = () => {
             )}
           </AnimatePresence>
         </div>
+        <motion.div
+          animate={also ? { y: "100px" } : {}}
+          className="absolute w-full top-[130px]"
+        >
+          <ContactsList />
+        </motion.div>
       </section>
       <Form />
     </main>

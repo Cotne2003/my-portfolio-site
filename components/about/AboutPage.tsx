@@ -30,7 +30,7 @@ const AboutPage = () => {
   };
 
   return (
-    <main className="min-h-[100vh] flex pl-[8%] pt-[150px] gap-[5%] max-lg:flex-col max-lg:px-[5%] max-lg:pt-[120px] max-lg:gap-[0px] max-lg:pb-[100px]">
+    <main className="min-h-[100vh] flex pl-[8%] pt-[150px] gap-[5%] max-lg:flex-col max-lg:px-[5%] max-lg:pt-[120px] max-lg:gap-[20px] max-lg:pb-[100px] max-md:pt-[100px]">
       <FirstSection
         persHandler={persHandler}
         pers={pers}

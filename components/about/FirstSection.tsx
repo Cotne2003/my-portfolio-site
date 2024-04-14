@@ -24,9 +24,9 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="absolute top-[240px] text-3xl text-[#B336FF] lg:hidden"
+          className="absolute top-[110px] text-3xl text-[#B336FF] lg:hidden w-[8ch]"
         >
-          personal
+          personal information
         </motion.h2>
       );
     } else if (info === false && prof === true) {
@@ -36,9 +36,9 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="absolute top-[240px] text-3xl text-[#B336FF] lg:hidden"
+          className="absolute top-[110px] text-3xl text-[#B336FF] lg:hidden w-[12ch]"
         >
-          proffesional
+          proffesional information
         </motion.h2>
       );
     } else {
@@ -46,7 +46,7 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
     }
   };
   return (
-    <section className="w-[220px] max-lg:w-full">
+    <section className="w-[220px] max-lg:w-full max-lg:border-b-2 max-lg:pb-3 max-lg:border-b-[#B336FF] relative">
       <h2 className="text-5xl max-lg:text-4xl">about-me</h2>
       <div className="mt-[40px] max-lg:mt-[20px] max-lg:h-[120px]">
         <div
@@ -93,9 +93,12 @@ const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
         </AnimatePresence>
       </div>
       {waitedH2()}
-      <div className="max-lg:hidden">
+      <motion.div
+        animate={info ? { y: "70px" } : {}}
+        className="max-lg:hidden absolute w-full top-[130px]"
+      >
         <ContactsList />
-      </div>
+      </motion.div>
     </section>
   );
 };
