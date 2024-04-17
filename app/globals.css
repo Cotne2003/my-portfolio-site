@@ -39,6 +39,16 @@ body {
   backdrop-filter: blur(100px);
 }
 
+:root {
+  --y-projects: -280px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --y-projects: 0px;
+  }
+}
+
 body::-webkit-scrollbar {
   display: none;
 }

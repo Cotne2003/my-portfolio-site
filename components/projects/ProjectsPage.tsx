@@ -32,12 +32,12 @@ const ProjectsPage = () => {
   };
 
   return (
-    <main className="flex pl-[8%] pt-[150px] gap-[50px] bg-[#010c15] pb-[5%] h-[100vh]">
+    <main className="flex pl-[8%] pt-[150px] gap-[50px] bg-[#010c15] pb-[5%] h-[100vh] max-lg:px-[5%] max-lg:pt-[120px] max-md:pt-[100px] max-lg:flex-col">
       <section className="min-w-[250px]">
-        <h2 className="text-5xl">projects</h2>
-        <div className="mt-[40px]">
+        <h2 className="text-5xl max-lg:text-4xl">projects</h2>
+        <div className="mt-[40px] max-lg:mt-[20px]">
           <div
-            className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer"
+            className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer  max-lg:text-xl"
             onClick={techHandler}
           >
             <span className={`${tech ? "rotate-90" : "rotate-0"}`}>
@@ -54,7 +54,7 @@ const ProjectsPage = () => {
               exit={{ opacity: 0, scaleY: 0, originY: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="pl-5 mt-3 flex items-center gap-3">
+              <div className="pl-5 mt-3 flex items-center gap-3 max-lg:text-sm">
                 <div className="checkbox-wrapper">
                   <input
                     id="_checkbox-1"
@@ -71,7 +71,7 @@ const ProjectsPage = () => {
                   All
                 </label>
               </div>
-              <div className="pl-5 mt-3 flex items-center gap-3">
+              <div className="pl-5 mt-3 flex items-center gap-3 max-lg:text-sm">
                 <div className="checkbox-wrapper">
                   <input
                     id="_checkbox-2"
@@ -85,7 +85,7 @@ const ProjectsPage = () => {
                 </div>
                 <label className="font-sans">React</label>
               </div>
-              <div className="pl-5 mt-3 flex items-center gap-3">
+              <div className="pl-5 mt-3 flex items-center gap-3 max-lg:text-sm">
                 <div className="checkbox-wrapper">
                   <input
                     id="_checkbox-3"
@@ -99,7 +99,7 @@ const ProjectsPage = () => {
                 </div>
                 <label className="font-sans">Javascript</label>
               </div>
-              <div className="pl-5 mt-3 flex items-center gap-3">
+              <div className="pl-5 mt-3 flex items-center gap-3 max-lg:text-sm">
                 <div className="checkbox-wrapper">
                   <input
                     id="_checkbox-4"
@@ -113,7 +113,7 @@ const ProjectsPage = () => {
                 </div>
                 <label className="font-sans">Typescript</label>
               </div>
-              <div className="pl-5 mt-3 flex items-center gap-3">
+              <div className="pl-5 mt-3 flex items-center gap-3 max-lg:text-sm">
                 <div className="checkbox-wrapper">
                   <input
                     id="_checkbox-5"
@@ -127,7 +127,7 @@ const ProjectsPage = () => {
                 </div>
                 <label className="font-sans">Next</label>
               </div>
-              <div className="pl-5 mt-3 flex items-center gap-3">
+              <div className="pl-5 mt-3 flex items-center gap-3 max-lg:text-sm">
                 <div className="checkbox-wrapper">
                   <input
                     id="_checkbox-6"
@@ -141,7 +141,7 @@ const ProjectsPage = () => {
                 </div>
                 <label className="font-sans">Tailwind CSS</label>
               </div>
-              <div className="pl-5 mt-3 flex items-center gap-3">
+              <div className="pl-5 mt-3 flex items-center gap-3 max-lg:text-sm">
                 <div className="checkbox-wrapper">
                   <input
                     id="_checkbox-7"
@@ -155,7 +155,7 @@ const ProjectsPage = () => {
                 </div>
                 <label className="font-sans">Styled Components</label>
               </div>
-              <div className="pl-5 mt-3 flex items-center gap-3">
+              <div className="pl-5 mt-3 flex items-center gap-3 max-lg:text-sm">
                 <div className="checkbox-wrapper">
                   <input
                     id="_checkbox-8"
@@ -174,10 +174,11 @@ const ProjectsPage = () => {
         </AnimatePresence>
       </section>
       <motion.section
-        className="mt-[-30px] py-[30px] flex justify-evenly gap-x-16 gap-y-[64px] flex-wrap pr-[5%] for-scroll"
+        className="mt-[-30px] py-[30px] flex justify-evenly gap-16 flex-wrap pr-[5%] for-scroll max-lg:absolute max-lg:top-[510px] max-md:top-[480px] max-lg:left-0 max-lg:mt-0 max-lg:px-[5%] max-[1275px]:gap-x-7 max-[1275px]:gap-y-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.8 }}
+        transition={{ duration: 0.3 }}
+        animate={tech ? {} : { y: "var(--y-projects)" }}
       >
         {data.map((project) => (
           <OneProject

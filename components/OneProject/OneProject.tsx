@@ -26,7 +26,7 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
   useEffect(() => {
     tools.map((tool) => {
       if (tool === "react") {
-        setRea(true);
+        setReact(true);
       }
       if (tool === "next") {
         setNext(true);
@@ -50,7 +50,7 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
   }, [tools]);
 
   const [next, setNext] = useState(false);
-  const [rea, setRea] = useState(false);
+  const [react, setReact] = useState(false);
   const [tpscript, setTpscript] = useState(false);
   const [js, setJs] = useState(false);
   const [stlComp, setStlComp] = useState(false);
@@ -59,7 +59,7 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
 
   return (
     <motion.div
-      className="w-[370px] h-[370px] border-[2px] border-[#1c2b3a] border-solid rounded-[15px] bg-[#011221] relative"
+      className="w-[370px] h-[370px] border-[2px] border-[#1c2b3a] border-solid rounded-[15px] bg-[#011221] relative max-[1275px]:w-[300px] max-[1275px]:h-[300px]"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       transition={{ duration: 1 }}
@@ -70,29 +70,34 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
         width={400}
         height={200}
         alt=""
-        className="w-full h-[200px] rounded-t-[15px]"
+        className="w-full h-[200px] max-[1275px]:h-[180px] rounded-t-[15px]"
       />
-      <div className="p-8 text-xl">
-        <h2 className="Caveat uppercase">{title}</h2>
-        <div className="flex justify-between items-center">
+      <div className="p-8 text-xl max-[1275px]:pt-5 max-[1275px]:px-5 max-[1275px]:pb-0">
+        <h2 className="Caveat uppercase max-[1275px]:text-sm">{title}</h2>
+        <div className="flex justify-between items-center max-[1275px]:mt-4">
           <a href={liveLink} target="_blank">
-            <button className="Caveat bg-[#1c2b3a] py-2 px-4 mt-5 rounded-md">
+            <button className="Caveat bg-[#1c2b3a] py-2 px-4 mt-5 rounded-md max-[1275px]:text-sm max-[1275px]:mt-0 hover:scale-[1.1] ease-in-out duration-300">
               view project
             </button>
           </a>
           <a href={codeLink} target="_blank">
-            <Image src={gitLogo} alt="" width={40} className="mt-4" />
+            <Image
+              src={gitLogo}
+              alt=""
+              width={40}
+              className="mt-4 max-[1275px]:mt-0 hover:scale-[1.3] ease-in-out duration-300"
+            />
           </a>
         </div>
       </div>
       {hover && (
-        <div className="flex absolute w-full h-[200px] rounded-t-[15px] left-0 top-0 bg-[#000000af] justify-evenly items-center">
+        <div className="flex absolute w-full h-[200px] max-[1275px]:h-[180px] rounded-t-[15px] left-0 top-0 bg-[#000000af] justify-evenly items-center">
           {next && (
             <span>
               <Image src={nextLogo} width={35} alt="" />
             </span>
           )}
-          {rea && (
+          {react && (
             <span>
               <Image src={reactLogo} width={35} alt="" />
             </span>
