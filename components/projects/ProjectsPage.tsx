@@ -37,7 +37,7 @@ const ProjectsPage = () => {
         <h2 className="text-5xl max-lg:text-4xl">projects</h2>
         <div className="mt-[40px] max-lg:mt-[20px]">
           <div
-            className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer  max-lg:text-xl"
+            className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer max-lg:text-xl"
             onClick={techHandler}
           >
             <span className={`${tech ? "rotate-90" : "rotate-0"}`}>

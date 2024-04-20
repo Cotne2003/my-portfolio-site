@@ -41,8 +41,14 @@ body {
 
 :root {
   --y-projects: -280px;
+  --y-contact: 0;
 }
 
+@media (max-width: 1024px) {
+  :root {
+    --y-contact: 90px;
+  }
+}
 @media (min-width: 1024px) {
   :root {
     --y-projects: 0px;

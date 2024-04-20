@@ -14,7 +14,7 @@ const ContactsList = () => {
     <>
       <div className="mt-[20px]">
         <div
-          className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer"
+          className="rounded-lg py-1 pl-4 bg-[#1e2d3d] text-2xl Caveat uppercase flex items-center gap-1 cursor-pointer  max-lg:text-xl"
           onClick={contactsHandler}
         >
           <span className={`${contacts ? "rotate-90" : "rotate-0"}`}>

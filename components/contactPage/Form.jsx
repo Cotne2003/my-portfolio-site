@@ -38,16 +38,17 @@ const From = () => {
   };
 
   return (
-    <motion.section
-      className="w-[770px] mt-[65px]"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <motion.section className="w-[770px] mt-[65px] max-lg:w-[95%] max-[1260px]:w-[600px] max-lg:mt-[0]">
       <div>
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="flex flex-col gap-5 max-lg:gap-2"
+        >
           <div className="flex flex-col">
-            <label className="font-sans text-[#607b96]">Name</label>
+            <label className="font-sans text-[#607b96] max-lg:text-sm">
+              Name
+            </label>
             <input
               required={true}
               autoComplete="off"
@@ -57,7 +58,9 @@ const From = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label className="font-sans text-[#607b96]">Email</label>
+            <label className="font-sans text-[#607b96] max-lg:text-sm">
+              Email
+            </label>
             <input
               type="email"
               autoComplete="off"
@@ -67,7 +70,9 @@ const From = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label className="font-sans text-[#607b96]">Message</label>
+            <label className="font-sans text-[#607b96] max-lg:text-sm">
+              Message
+            </label>
             <textarea
               required={true}
               name="message"
