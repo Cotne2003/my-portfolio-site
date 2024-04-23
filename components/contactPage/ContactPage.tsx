@@ -14,7 +14,7 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="h-[100vh] flex pl-[8%] pt-[150px] gap-[5%] max-lg:px-[5%] max-lg:pt-[120px] max-md:pt-[100px]">
+    <main className="h-[100vh] flex pl-[8%] pt-[150px] gap-[5%] max-lg:px-[5%] max-lg:pt-[120px] max-md:pt-[100px]  max-lg:h-[120vh]">
       <section className="w-[220px] relative max-lg:w-full">
         <h2 className="text-5xl max-lg:text-4xl">contact-me</h2>
 
