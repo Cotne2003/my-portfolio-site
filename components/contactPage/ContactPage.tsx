@@ -90,7 +90,7 @@ const ContactPage = () => {
         className="max-lg:absolute max-lg:top-[240px] max-lg:left-0 max-lg:pl-[5%] max-md:top-[210px] max-lg:w-[100%]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.1 }}
         animate={also ? { y: "var(--y-contact)" } : {}}
       >
         <Form />
