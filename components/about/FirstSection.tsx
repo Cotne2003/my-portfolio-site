@@ -12,7 +12,7 @@ type Props = {
 };
 
 const FirstSection = ({ persHandler, pers, profHandler, prof }: Props) => {
-  const [info, setInfo] = useState(false);
+  const [info, setInfo] = useState(true);
   const infoHandler = () => {
     setInfo(!info);
   };

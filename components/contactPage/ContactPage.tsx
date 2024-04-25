@@ -37,14 +37,14 @@ const ContactPage = () => {
                 initial={{ opacity: 0, scaleY: 0, originY: 0 }}
                 animate={{ opacity: 1, scaleY: 1, y: 0 }}
                 exit={{ opacity: 0, scaleY: 0, originY: 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.1 }}
               >
                 <div className="pl-5 flex gap-3 items-center py-1 hover:opacity-50 cursor-pointer max-lg:text-sm">
                   <span>
                     <Image src={link} width={15} alt="" />
                   </span>
                   <a
-                    href="https://www.instagram.com/bassiashvili_cotnee/"
+                    href="https://www.instagram.com/bassiashvili_tsotnee/"
                     target="_blank"
                     className="font-sans"
                   >
@@ -56,7 +56,7 @@ const ContactPage = () => {
                     <Image src={link} width={15} alt="" />
                   </span>
                   <a
-                    href="https://www.linkedin.com/in/cotne-basiashvili-23a532282/"
+                    href="https://www.linkedin.com/in/tsotne-basiashvili-23a532282/"
                     target="_blank"
                     className="font-sans"
                   >

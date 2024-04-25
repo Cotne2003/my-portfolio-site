@@ -87,7 +87,7 @@ const HomePage = () => {
               } as CSSProperties
             }
           >
-            <span className="text-white">i am </span>Cotne Basiashvili
+            <span className="text-white">i am </span>Tsotne Basiashvili
           </motion.h1>
           <motion.h2
             className="text-xl font-normal w-[696px] max-[1439px]:text-base max-[1439px]:w-[500px] max-md:w-full max-lg:w-[400px]"
@@ -127,7 +127,7 @@ const HomePage = () => {
           </h3>
           <div className="flex justify-end gap-7 mt-6 items-center">
             <a
-              href="https://www.instagram.com/bassiashvili_cotnee/"
+              href="https://www.instagram.com/bassiashvili_tsotnee/"
               target="_blank"
             >
               <Image
