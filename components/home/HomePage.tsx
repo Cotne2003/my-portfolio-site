@@ -61,7 +61,7 @@ const HomePage = () => {
         </div>
       </motion.section>
 
-      <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh] max-[1439px]:p-[5%] max-[1439px]:pt-[13%] max-md:text-left max-md:p-0 max-md:pt-[120px] max-md:h-full max-xl:pt-[150px]">
+      <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh] max-[1439px]:p-[5%] max-[1439px]:pt-[13%] max-md:text-left max-md:p-0 max-md:pt-[120px] max-md:h-full max-xl:pt-[150px] max-sm:pt-[100px]">
         <div className="flex flex-col gap-1 max-md:px-[5%] max-md:gap-0">
           <motion.p
             className="font-light leading-6 Caveat text-7xl mb-8 max-[1440px]:text-[50px] max-[1439px]:mb-3"
@@ -112,7 +112,7 @@ const HomePage = () => {
           transition={{ duration: 1, delay: 2 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="flex flex-col items-end max-md:px-[5%] max-md:items-start max-md:absolute bottom-10"
+          className="flex flex-col items-end max-md:px-[5%] max-md:items-start max-md:absolute bottom-10 max-sm:bottom-4"
         >
           <p className="font-normal text-[#607b96]">
             find my profile on Github:
@@ -127,7 +127,9 @@ const HomePage = () => {
               https://github.com/Cotne2003
             </a>
           </h3>
-          <p className="font-normal text-[#607b96] mt-2">contacts:</p>
+          <p className="font-normal text-[#607b96] mt-2 max-sm:mt-0">
+            contacts:
+          </p>
           <div className="flex gap-3 pt-0 items-center font-sans py-1 hover:opacity-50 cursor-pointer max-md:flex-row-reverse">
             basiashvilic@gmail.com
             <span>
@@ -140,7 +142,7 @@ const HomePage = () => {
               <Image src={telephone} width={15} alt="" />
             </span>
           </div>
-          <div className="flex justify-end gap-7 mt-6 items-center">
+          <div className="flex justify-end gap-7 mt-6 items-center max-sm:mt-3">
             <a
               href="https://www.instagram.com/bassiashvili_tsotnee/"
               target="_blank"
