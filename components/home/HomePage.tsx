@@ -15,6 +15,8 @@ import git from "/public/logos/git.webp";
 import api from "/public/logos/icons8-rest-api-96.webp";
 import Image from "next/image";
 import { CSSProperties } from "react";
+import email from "/public/logos/Email.svg";
+import telephone from "/public/logos/telephone.png";
 
 const skills = [
   html,
@@ -125,6 +127,19 @@ const HomePage = () => {
               https://github.com/Cotne2003
             </a>
           </h3>
+          <p className="font-normal text-[#607b96] mt-2">contacts:</p>
+          <div className="flex gap-3 pt-0 items-center font-sans py-1 hover:opacity-50 cursor-pointer max-md:flex-row-reverse">
+            basiashvilic@gmail.com
+            <span>
+              <Image src={email} width={15} alt="" />
+            </span>
+          </div>
+          <div className="flex gap-3 items-center font-sans hover:opacity-50 cursor-pointer max-md:flex-row-reverse">
+            +(995) 568 864 004
+            <span>
+              <Image src={telephone} width={15} alt="" />
+            </span>
+          </div>
           <div className="flex justify-end gap-7 mt-6 items-center">
             <a
               href="https://www.instagram.com/bassiashvili_tsotnee/"
