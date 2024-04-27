@@ -174,7 +174,7 @@ const ProjectsPage = () => {
         </AnimatePresence>
       </section>
       <motion.section
-        className="mt-[-30px] py-[30px] flex justify-evenly gap-16 flex-wrap pr-[5%] for-scroll max-lg:absolute max-lg:top-[510px] max-md:top-[480px] max-lg:left-0 max-lg:mt-0 max-lg:px-[5%] max-[1275px]:gap-x-7 max-[1275px]:gap-y-10"
+        className="mt-[-30px] py-[30px] flex justify-evenly gap-16 flex-wrap pr-[5%] for-scroll max-lg:absolute max-lg:top-[510px] max-md:top-[480px] max-lg:left-0 max-lg:mt-0 max-lg:px-[5%] max-[1275px]:gap-x-7 max-[1275px]:gap-y-10 max-lg:h-fit max-lg:overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.3 }}

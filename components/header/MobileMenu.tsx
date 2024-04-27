@@ -15,7 +15,7 @@ const MobileMenu = ({ menuHandler }: Props) => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
       exit={{ opacity: 0, x: -300 }}
-      className="fixed top-[65px] bg-[#010c15] h-full w-full z-10 md:hidden"
+      className="fixed top-[65px] bg-[#010c15] h-[100vh] w-full z-10 md:hidden overflow-hidden"
     >
       <nav className="flex flex-col justify-start">
         <Link

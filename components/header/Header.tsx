@@ -10,6 +10,11 @@ const Header = () => {
   const [menu, setMenu] = useState(false);
   const menuHandler = () => {
     setMenu(!menu);
+    if (menu) {
+      document.body.style.overflow = "scroll";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
   };
   const pathname = usePathname();
   return (

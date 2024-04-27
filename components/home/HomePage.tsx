@@ -127,16 +127,16 @@ const HomePage = () => {
               https://github.com/Cotne2003
             </a>
           </h3>
-          <p className="font-normal text-[#607b96] mt-2 max-sm:mt-0">
+          <p className="font-normal text-[#607b96] mt-2 max-sm:mt-0 lg:hidden">
             contacts:
           </p>
-          <div className="flex gap-3 pt-0 items-center font-sans py-1 hover:opacity-50 cursor-pointer max-md:flex-row-reverse">
+          <div className="flex gap-3 pt-0 items-center font-sans py-1 hover:opacity-50 cursor-pointer max-md:flex-row-reverse lg:hidden">
             basiashvilic@gmail.com
             <span>
               <Image src={email} width={15} alt="" />
             </span>
           </div>
-          <div className="flex gap-3 items-center font-sans hover:opacity-50 cursor-pointer max-md:flex-row-reverse">
+          <div className="flex gap-3 items-center font-sans hover:opacity-50 cursor-pointer max-md:flex-row-reverse lg:hidden">
             +(995) 568 864 004
             <span>
               <Image src={telephone} width={15} alt="" />
