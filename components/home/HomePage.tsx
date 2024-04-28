@@ -39,7 +39,7 @@ const HomePage = () => {
 
   return (
     <main className="flex justify-between max-md:h-[100vh] overflow-hidden">
-      <motion.section
+      {/* <motion.section
         className="pl-[8%] pt-[10%] text-center w-1/2 2xl:w-1/3 2xl:ml-[40px] max-[1439px]:w-2/5 max-md:hidden max-xl:pt-[140px] max-xl:pl-[5%]"
         initial={{ opacity: 0 }}
         transition={{ duration: 1, delay: 3 }}
@@ -59,7 +59,7 @@ const HomePage = () => {
             />
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 
       <section className="flex flex-col justify-between text-right p-[8%] pt-[13%] h-[100vh] max-[1439px]:p-[5%] max-[1439px]:pt-[13%] max-md:text-left max-md:p-0 max-md:pt-[120px] max-md:h-full max-xl:pt-[150px] max-sm:pt-[100px]">
         <div className="flex flex-col gap-1 max-md:px-[5%] max-md:gap-0">
