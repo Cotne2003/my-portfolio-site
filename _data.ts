@@ -1,5 +1,13 @@
 export const Data = [
   {
+    id: 0,
+    title: "entertainment web app",
+    img: "/assets/entertainment.png",
+    tools: ["next", "typescript", "styled-components", "mongo", "API"],
+    liveLink: "https://entertainment-web-app-lovat-eight.vercel.app/",
+    codeLink: "https://github.com/Cotne2003/-Entertainment-Web-App",
+  },
+  {
     id: 1,
     title: "audiophile ecommerce website",
     img: "/assets/audiophile.png",

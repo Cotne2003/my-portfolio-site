@@ -6,6 +6,7 @@ import reactLogo from "/public/logos/reactLogo.webp";
 import typescriptLogo from "/public/logos/typescript.webp";
 import jsLogo from "/public/logos/js.webp";
 import styledCompLogo from "/public/logos/styled-components.webp";
+import mongoLogo from "/public/logos/mongo.webp";
 import nextLogo from "@/public/logos/next.svg";
 import tailwindLogo from "/public/logos/tailwind.webp";
 import restApiLogo from "/public/logos/icons8-rest-api-96.webp";
@@ -46,6 +47,9 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
       if (tool === "API") {
         setRestAp(true);
       }
+      if (tool === "mongo") {
+        setMongo(true);
+      }
     });
   }, [tools]);
 
@@ -56,6 +60,7 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
   const [stlComp, setStlComp] = useState(false);
   const [tail, setTail] = useState(false);
   const [restAp, setRestAp] = useState(false);
+  const [mongo, setMongo] = useState(false);
 
   return (
     <motion.div
@@ -125,6 +130,11 @@ const OneProject = ({ codeLink, imgSrc, liveLink, title, tools }: Props) => {
           {restAp && (
             <span>
               <Image src={restApiLogo} width={35} alt="" />
+            </span>
+          )}
+          {mongo && (
+            <span>
+              <Image src={mongoLogo} width={35} alt="" />
             </span>
           )}
         </div>

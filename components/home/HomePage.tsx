@@ -12,6 +12,7 @@ import js from "/public/logos/js.webp";
 import typescript from "/public/logos/typescript.webp";
 import next from "/public/logos/next.svg";
 import git from "/public/logos/git.webp";
+import mongo from "/public/logos/mongo.webp";
 import api from "/public/logos/icons8-rest-api-96.webp";
 import Image from "next/image";
 import { CSSProperties } from "react";
@@ -29,6 +30,7 @@ const skills = [
   next,
   git,
   api,
+  mongo,
 ];
 
 const HomePage = () => {
